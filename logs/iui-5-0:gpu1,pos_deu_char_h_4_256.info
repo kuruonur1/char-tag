@@ -1,0 +1,46 @@
+activation:	bi-lstm
+batch_norm:	0
+breaktrn:	0
+captrn:	500
+cdrop:	0.0
+charset:	[]
+decoder:	1
+drates:	[0.2, 0.5, 0.5, 0.5, 0.8]
+emb:	0
+eps:	1e-08
+fbias:	0.0
+fbmerge:	concat
+feat:	basic
+fepoch:	600
+gclip:	0
+gnoise:	False
+in2out:	0
+lang:	deu-pos
+level:	char
+load:	
+log:	pos_deu_char_h_4_256
+lr:	0.001
+n_batch:	32
+n_hidden:	[256, 256, 256, 256]
+norm:	1
+opt:	adam
+recout:	0
+rep:	std
+rnn:	lazrnn
+sample:	0
+save:	True
+seed:	0
+shuf:	1
+sorted:	1
+tagging:	bio
+truncate:	-1
+base_log_name:	iui-5-0:gpu1,pos_deu_char_h_4_256
+# of sents trn, dev, tst: 14118 799 977
+input: trn	maxlen: 813 minlen: 3 avglen: 117.85 stdlen: 63.92
+input: dev	maxlen: 316 minlen: 13 avglen: 92.01 stdlen: 50.39
+input: tst	maxlen: 399 minlen: 2 avglen: 101.73 stdlen: 64.40
+[u'c= ', u'c=!', u'c="', u'c=#', u'c=$', u'c=%', u'c=&', u"c='", u'c=(', u'c=)', u'c=*', u'c=+', u'c=,', u'c=-', u'c=.', u'c=/', u'c=0', u'c=1', u'c=2', u'c=3', u'c=4', u'c=5', u'c=6', u'c=7', u'c=8', u'c=9', u'c=:', u'c=;', u'c==', u'c=?', u'c=@', u'c=A', u'c=B', u'c=C', u'c=D', u'c=E', u'c=F', u'c=G', u'c=H', u'c=I', u'c=J', u'c=K', u'c=L', u'c=M', u'c=N', u'c=O', u'c=P', u'c=Q', u'c=R', u'c=S', u'c=T', u'c=U', u'c=V', u'c=W', u'c=X', u'c=Y', u'c=Z', u'c=[', u'c=]', u'c=_', u'c=`', u'c=a', u'c=b', u'c=c', u'c=d', u'c=e', u'c=f', u'c=g', u'c=h', u'c=i', u'c=j', u'c=k', u'c=l', u'c=m', u'c=n', u'c=o', u'c=p', u'c=q', u'c=r', u'c=s', u'c=t', u'c=u', u'c=v', u'c=w', u'c=x', u'c=y', u'c=z', u'c={', u'c=|', u'c=}', u'c=\xa3', u'c=\xa7', u'c=\xab', u'c=\xae', u'c=\xb0', u'c=\xb2', u'c=\xb3', u'c=\xb5', u'c=\xb7', u'c=\xbb', u'c=\xbd', u'c=\xbe', u'c=\xc1', u'c=\xc2', u'c=\xc4', u'c=\xc6', u'c=\xc7', u'c=\xc9', u'c=\xcd', u'c=\xce', u'c=\xd6', u'c=\xd7', u'c=\xda', u'c=\xdc', u'c=\xde', u'c=\xdf', u'c=\xe0', u'c=\xe1', u'c=\xe2', u'c=\xe3', u'c=\xe4', u'c=\xe5', u'c=\xe6', u'c=\xe7', u'c=\xe8', u'c=\xe9', u'c=\xea', u'c=\xeb', u'c=\xed', u'c=\xee', u'c=\xef', u'c=\xf0', u'c=\xf1', u'c=\xf2', u'c=\xf3', u'c=\xf4', u'c=\xf5', u'c=\xf6', u'c=\xf7', u'c=\xf8', u'c=\xfa', u'c=\xfc', u'c=\xfd', u'c=\u0101', u'c=\u0103', u'c=\u0105', u'c=\u0107', u'c=\u010c', u'c=\u010d', u'c=\u010f', u'c=\u0111', u'c=\u0113', u'c=\u0117', u'c=\u0119', u'c=\u011b', u'c=\u011f', u'c=\u012b', u'c=\u0130', u'c=\u0131', u'c=\u0137', u'c=\u013e', u'c=\u0141', u'c=\u0142', u'c=\u0144', u'c=\u0148', u'c=\u014c', u'c=\u014d', u'c=\u014f', u'c=\u0151', u'c=\u0153', u'c=\u0159', u'c=\u015a', u'c=\u015b', u'c=\u015e', u'c=\u015f', u'c=\u0160', u'c=\u0161', u'c=\u0162', u'c=\u0163', u'c=\u016b', u'c=\u016f', u'c=\u017a', u'c=\u017c', u'c=\u017d', u'c=\u017e', u'c=\u01e8', u'c=\u025b', u'c=\u0282', u'c=\u02bf', u'c=\u0361', u'c=\u0393', u'c=\u03a3', u'c=\u03a9', u'c=\u03ac', u'c=\u03ad', u'c=\u03af', u'c=\u03b1', u'c=\u03b4', u'c=\u03b9', u'c=\u03ba', u'c=\u03bb', u'c=\u03bc', u'c=\u03bd', u'c=\u03bf', u'c=\u03c0', u'c=\u03c1', u'c=\u03c2', u'c=\u03c3', u'c=\u03c9', u'c=\u03ca', u'c=\u0412', u'c=\u0414', u'c=\u0415', u'c=\u041c', u'c=\u041e', u'c=\u0422', u'c=\u0426', u'c=\u0430', u'c=\u0432', u'c=\u0435', u'c=\u0438', u'c=\u043a', u'c=\u043b', u'c=\u043d', u'c=\u043e', u'c=\u0441', u'c=\u0442', u'c=\u0443', u'c=\u0448', u'c=\u045a', u'c=\u05d4', u'c=\u05dd', u'c=\u05e9', u'c=\u1e25', u'c=\u1e6b', u'c=\u1e6f', u'c=\u1ea3', u'c=\u1ec7', u'c=\u1ed5', u'c=\u2020', u'c=\u2030', u'c=\u20ac', u'c=\u2122', u'c=\u2192', u'c=\u516c', u'c=\u5feb', u'c=\u8def', u'c=\u901f', u'c=\ufeff']
+['i-adj' 'i-adp' 'i-adv' 'i-aux' 'i-conj' 'i-det' 'i-noun' 'i-num' 'i-part'
+ 'i-pron' 'i-propn' 'i-punct' 'i-sconj' 'i-verb' 'i-x' 'o']
+NF: 249 NC: 16
+Compiling functions...

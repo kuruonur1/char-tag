@@ -1,0 +1,2582 @@
+activation:	bi-lstm
+batch_norm:	0
+breaktrn:	0
+captrn:	500
+cdrop:	0.0
+charset:	[]
+decoder:	1
+drates:	[0.2, 0.5, 0.5, 0.5, 0.5, 0.5, 0.8]
+emb:	0
+eps:	1e-08
+fbias:	0.0
+fbmerge:	concat
+feat:	basic
+fepoch:	600
+gclip:	0
+gnoise:	False
+in2out:	0
+lang:	cze
+level:	char
+load:	
+log:	ner_cze_char_h_6_256
+lr:	0.001
+n_batch:	32
+n_hidden:	[256, 256, 256, 256, 256, 256]
+norm:	1
+opt:	adam
+recout:	0
+rep:	std
+rnn:	lazrnn
+sample:	0
+save:	True
+shuf:	1
+sorted:	1
+tagging:	bio
+truncate:	-1
+base_log_name:	ahtapot-5-1:gpu7,ner_cze_char_h_6_256
+# of sents trn, dev, tst: 4644 572 577
+input: trn	maxlen: 625 minlen: 3 avglen: 142.17 stdlen: 90.55
+input: dev	maxlen: 593 minlen: 3 avglen: 142.58 stdlen: 91.08
+input: tst	maxlen: 627 minlen: 3 avglen: 144.16 stdlen: 92.89
+[u'c= ', u'c=!', u'c="', u'c=$', u'c=%', u'c=&', u"c='", u'c=(', u'c=)', u'c=*', u'c=+', u'c=,', u'c=-', u'c=.', u'c=/', u'c=0', u'c=1', u'c=2', u'c=3', u'c=4', u'c=5', u'c=6', u'c=7', u'c=8', u'c=9', u'c=:', u'c=;', u'c=<', u'c==', u'c=>', u'c=?', u'c=@', u'c=A', u'c=B', u'c=C', u'c=D', u'c=E', u'c=F', u'c=G', u'c=H', u'c=I', u'c=J', u'c=K', u'c=L', u'c=M', u'c=N', u'c=O', u'c=P', u'c=Q', u'c=R', u'c=S', u'c=T', u'c=U', u'c=V', u'c=W', u'c=X', u'c=Y', u'c=Z', u'c=[', u'c=\\', u'c=]', u'c=_', u'c=`', u'c=a', u'c=b', u'c=c', u'c=d', u'c=e', u'c=f', u'c=g', u'c=h', u'c=i', u'c=j', u'c=k', u'c=l', u'c=m', u'c=n', u'c=o', u'c=p', u'c=q', u'c=r', u'c=s', u'c=t', u'c=u', u'c=v', u'c=w', u'c=x', u'c=y', u'c=z', u'c=\xa7', u'c=\xae', u'c=\xb0', u'c=\xb5', u'c=\xc1', u'c=\xc9', u'c=\xcd', u'c=\xda', u'c=\xdc', u'c=\xdd', u'c=\xe1', u'c=\xe2', u'c=\xe4', u'c=\xe9', u'c=\xed', u'c=\xee', u'c=\xf1', u'c=\xf3', u'c=\xf6', u'c=\xfa', u'c=\xfc', u'c=\xfd', u'c=\u0107', u'c=\u010c', u'c=\u010d', u'c=\u010e', u'c=\u010f', u'c=\u0110', u'c=\u011a', u'c=\u011b', u'c=\u0139', u'c=\u013a', u'c=\u013d', u'c=\u0144', u'c=\u0147', u'c=\u0148', u'c=\u0158', u'c=\u0159', u'c=\u015b', u'c=\u0160', u'c=\u0161', u'c=\u0164', u'c=\u0165', u'c=\u016e', u'c=\u016f', u'c=\u017d', u'c=\u017e']
+c=  c=! c=" c=$ c=% c=& c=' c=( c=) c=* c=+ c=, c=- c=. c=/ c=0 c=1 c=2 c=3 c=4 c=5 c=6 c=7 c=8 c=9 c=: c=; c=< c== c=> c=? c=@ c=A c=B c=C c=D c=E c=F c=G c=H c=I c=J c=K c=L c=M c=N c=O c=P c=Q c=R c=S c=T c=U c=V c=W c=X c=Y c=Z c=[ c=\ c=] c=_ c=` c=a c=b c=c c=d c=e c=f c=g c=h c=i c=j c=k c=l c=m c=n c=o c=p c=q c=r c=s c=t c=u c=v c=w c=x c=y c=z c=§ c=® c=° c=µ c=Á c=É c=Í c=Ú c=Ü c=Ý c=á c=â c=ä c=é c=í c=î c=ñ c=ó c=ö c=ú c=ü c=ý c=ć c=Č c=č c=Ď c=ď c=Đ c=Ě c=ě c=Ĺ c=ĺ c=Ľ c=ń c=Ň c=ň c=Ř c=ř c=ś c=Š c=š c=Ť c=ť c=Ů c=ů c=Ž c=ž
+['i-a' 'i-g' 'i-i' 'i-m' 'i-o' 'i-p' 'i-t' 'o']
+NF: 136 NC: 8
+[[  1.         -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339]
+ [-36.04365339   1.         -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339   1.         -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339 -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339   1.
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.         -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339   1.        ]]
+[[  1.         -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339   1.        ]
+ [-36.04365339   1.         -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339   1.        ]
+ [-36.04365339 -36.04365339   1.         -36.04365339 -36.04365339
+  -36.04365339 -36.04365339   1.        ]
+ [-36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339 -36.04365339   1.        ]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339   1.        ]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339   1.
+  -36.04365339   1.        ]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.           1.        ]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339   1.        ]]
+[[  1.         -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339]
+ [-36.04365339   1.         -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339   1.         -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339 -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339   1.
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.         -36.04365339]
+ [  1.           1.           1.           1.           1.           1.
+    1.           1.        ]]
+l_in: (None, None, 136)
+l_mask: (None, None)
+l_drop: (None, None, 136)
+l_forward: (None, None, 256)
+l_backward: (None, None, 256)
+l_fbmerge: (None, None, 512)
+l_forward: (None, None, 256)
+l_backward: (None, None, 256)
+l_fbmerge: (None, None, 512)
+l_forward: (None, None, 256)
+l_backward: (None, None, 256)
+l_fbmerge: (None, None, 512)
+l_forward: (None, None, 256)
+l_backward: (None, None, 256)
+l_fbmerge: (None, None, 512)
+l_forward: (None, None, 256)
+l_backward: (None, None, 256)
+l_fbmerge: (None, None, 512)
+l_forward: (None, None, 256)
+l_backward: (None, None, 256)
+l_fbmerge: (None, None, 512)
+l_reshape: (None, 512)
+l_rec_out: (None, 8)
+l_out: (None, None, 8)
+[W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W, b]
+Compiling functions...
+Compiling done.
+training the model...
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  1       1.3442e-01   289.8751
+trn   1       1.1862e-01    83.8819     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 1 phrases; correct: 0.
+accuracy:  78.14%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  1
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   1       1.2090e-01    12.0909     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 1 phrases; correct: 0.
+accuracy:  77.01%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  1
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   1       1.3471e-01    14.3507     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  2       1.2089e-01   285.5312
+trn   2       1.1509e-01    84.4020     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   2       1.1776e-01    11.6180     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   2       1.2899e-01    14.1263     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  3       1.1761e-01   281.3262
+trn   3       1.1454e-01    89.4952     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   3       1.1752e-01    11.7477     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   3       1.2768e-01    13.0997     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  4       1.1668e-01   283.6093
+trn   4       1.1426e-01    86.2140     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   4       1.1713e-01    11.5009     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   4       1.2786e-01    14.1786     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  5       1.1634e-01   288.3411
+trn   5       1.1508e-01    85.8421     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   5       1.1792e-01    12.1583     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   5       1.2768e-01    14.2322     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  6       1.1547e-01   276.2920
+trn   6       1.1372e-01    82.0783     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   6       1.1658e-01    11.7478     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   6       1.2663e-01    13.2361     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  7       1.1536e-01   293.0136
+trn   7       1.1335e-01    86.1141     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   7       1.1649e-01    11.9859     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   7       1.2770e-01    13.5830     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  8       1.1572e-01   284.2551
+trn   8       1.1306e-01    82.5306     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   8       1.1632e-01    11.9485     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   8       1.2809e-01    14.7286     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  9       1.1499e-01   284.8559
+trn   9       1.1340e-01    86.6849     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   9       1.1696e-01    12.8263     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   9       1.2925e-01    13.9363     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  10      1.1458e-01   282.2338
+trn   10      1.1322e-01    85.4262     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   10      1.1646e-01    11.6802     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   10      1.2710e-01    13.0379     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  11      1.1486e-01   295.1585
+trn   11      1.1337e-01    85.9070     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   11      1.1651e-01    11.6122     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   11      1.2668e-01    13.7923     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  12      1.1452e-01   278.0550
+trn   12      1.1246e-01    81.6475     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   12      1.1575e-01    10.9126     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   12      1.2703e-01    12.5114     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  13      1.1383e-01   292.0382
+trn   13      1.1160e-01    84.6714     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   13      1.1521e-01    11.6675     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   13      1.2573e-01    13.4622     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  14      1.1333e-01   282.5557
+trn   14      1.1148e-01    86.2770     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   14      1.1542e-01    12.0644     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   14      1.2562e-01    13.5803     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  15      1.1294e-01   288.1595
+trn   15      1.1154e-01    87.8939     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   15      1.1461e-01    11.6863     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   15      1.2573e-01    13.7821     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  16      1.1295e-01   279.1464
+trn   16      1.1349e-01    87.4952     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   16      1.1743e-01    12.0273     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   16      1.2466e-01    14.4215     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  17      1.1326e-01   287.9833
+trn   17      1.1141e-01    86.6431     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   17      1.1473e-01    11.6585     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   17      1.2502e-01    13.2354     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  18      1.1306e-01   282.1851
+trn   18      1.1162e-01    84.4779     0.2197     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   18      1.1568e-01    11.8146     0.2267     0.0000     0.0000     0.0000     0.0000          1
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   18      1.2347e-01    13.4950     0.2378     0.0000     0.0000     0.0000     0.0000          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  19      1.1237e-01   289.1863
+trn   19      1.1018e-01    84.2192     0.2193     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 10 phrases; correct: 9.
+accuracy:  78.20%; precision:  90.00%; recall:   0.48%; FB1:   0.96
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  90.00%; recall:   3.27%; FB1:   6.32  10
+
+
+dev   19      1.1317e-01    11.9470     0.2262    90.0000     0.4800     0.9600     0.9600         19
+
+processed 15061 tokens with 1906 phrases; found: 9 phrases; correct: 6.
+accuracy:  77.05%; precision:  66.67%; recall:   0.31%; FB1:   0.63
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  66.67%; recall:   1.66%; FB1:   3.24  9
+
+
+tst   19      1.2295e-01    13.2619     0.2375    66.6700     0.3100     0.6300     0.6300         19
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  20      1.1180e-01   283.4406
+trn   20      1.0942e-01    88.9578     0.2189     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 43 phrases; correct: 24.
+accuracy:  78.31%; precision:  55.81%; recall:   1.28%; FB1:   2.51
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  56.25%; recall:   2.80%; FB1:   5.34  16
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  55.56%; recall:   5.45%; FB1:   9.93  27
+
+
+dev   20      1.1204e-01    12.4986     0.2249    55.8100     1.2800     2.5100     2.5100         20
+
+processed 15061 tokens with 1906 phrases; found: 45 phrases; correct: 13.
+accuracy:  76.89%; precision:  28.89%; recall:   0.68%; FB1:   1.33
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  12.50%; recall:   0.53%; FB1:   1.02  16
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  37.93%; recall:   3.05%; FB1:   5.64  29
+
+
+tst   20      1.2262e-01    13.5178     0.2379    28.8900     0.6800     1.3300     1.3300         20
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  21      1.1143e-01   292.9233
+trn   21      1.0860e-01    86.4600     0.2186     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 14 phrases; correct: 9.
+accuracy:  78.29%; precision:  64.29%; recall:   0.48%; FB1:   0.95
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  64.29%; recall:   2.80%; FB1:   5.37  14
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   21      1.1168e-01    11.3733     0.2254    64.2900     0.4800     0.9500     2.5100         20
+
+processed 15061 tokens with 1906 phrases; found: 8 phrases; correct: 2.
+accuracy:  77.00%; precision:  25.00%; recall:   0.10%; FB1:   0.21
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  25.00%; recall:   0.53%; FB1:   1.04  8
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   21      1.2251e-01    13.6142     0.2374    25.0000     0.1000     0.2100     1.3300         20
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  22      1.1130e-01   278.3511
+trn   22      1.0903e-01    87.6350     0.2186     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 25 phrases; correct: 16.
+accuracy:  78.33%; precision:  64.00%; recall:   0.86%; FB1:   1.69
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  36.36%; recall:   1.25%; FB1:   2.41  11
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  85.71%; recall:   4.36%; FB1:   8.30  14
+
+
+dev   22      1.1211e-01    12.2017     0.2252    64.0000     0.8600     1.6900     2.5100         20
+
+processed 15061 tokens with 1906 phrases; found: 20 phrases; correct: 9.
+accuracy:  77.08%; precision:  45.00%; recall:   0.47%; FB1:   0.93
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  14.29%; recall:   0.26%; FB1:   0.52  7
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  61.54%; recall:   2.22%; FB1:   4.28  13
+
+
+tst   22      1.2258e-01    14.6010     0.2370    45.0000     0.4700     0.9300     1.3300         20
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  23      1.1044e-01   287.6361
+trn   23      1.0915e-01    89.5522     0.2189     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 20 phrases; correct: 13.
+accuracy:  78.26%; precision:  65.00%; recall:   0.69%; FB1:   1.37
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  16.67%; recall:   0.31%; FB1:   0.61  6
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  85.71%; recall:   4.36%; FB1:   8.30  14
+
+
+dev   23      1.1230e-01    11.6304     0.2257    65.0000     0.6900     1.3700     2.5100         20
+
+processed 15061 tokens with 1906 phrases; found: 12 phrases; correct: 9.
+accuracy:  77.07%; precision:  75.00%; recall:   0.47%; FB1:   0.94
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  50.00%; recall:   0.26%; FB1:   0.53  2
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  80.00%; recall:   2.22%; FB1:   4.31  10
+
+
+tst   23      1.2319e-01    13.7862     0.2373    75.0000     0.4700     0.9400     1.3300         20
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  24      1.1072e-01   284.0040
+trn   24      1.1165e-01    86.6984     0.2196     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 2 phrases; correct: 2.
+accuracy:  78.16%; precision: 100.00%; recall:   0.11%; FB1:   0.21
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision: 100.00%; recall:   0.31%; FB1:   0.62  1
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision: 100.00%; recall:   0.36%; FB1:   0.72  1
+
+
+dev   24      1.1501e-01    10.5003     0.2265   100.0000     0.1100     0.2100     2.5100         20
+
+processed 15061 tokens with 1906 phrases; found: 0 phrases; correct: 0.
+accuracy:  77.02%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   24      1.2446e-01    13.8675     0.2378     0.0000     0.0000     0.0000     1.3300         20
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  25      1.1065e-01   287.8908
+trn   25      1.0825e-01    85.1743     0.2184     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 22 phrases; correct: 16.
+accuracy:  78.35%; precision:  72.73%; recall:   0.86%; FB1:   1.69
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  54.55%; recall:   1.87%; FB1:   3.61  11
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  90.91%; recall:   3.64%; FB1:   6.99  11
+
+
+dev   25      1.1123e-01    11.8258     0.2249    72.7300     0.8600     1.6900     2.5100         20
+
+processed 15061 tokens with 1906 phrases; found: 14 phrases; correct: 9.
+accuracy:  77.08%; precision:  64.29%; recall:   0.47%; FB1:   0.94
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  33.33%; recall:   0.53%; FB1:   1.04  6
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  87.50%; recall:   1.94%; FB1:   3.79  8
+
+
+tst   25      1.2064e-01    13.8562     0.2369    64.2900     0.4700     0.9400     1.3300         20
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  26      1.1038e-01   278.1142
+trn   26      1.0778e-01    88.9727     0.2181     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 27 phrases; correct: 19.
+accuracy:  78.34%; precision:  70.37%; recall:   1.02%; FB1:   2.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  61.54%; recall:   2.49%; FB1:   4.79  13
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  78.57%; recall:   4.00%; FB1:   7.61  14
+
+
+dev   26      1.1090e-01    12.3091     0.2249    70.3700     1.0200     2.0000     2.5100         20
+
+processed 15061 tokens with 1906 phrases; found: 19 phrases; correct: 9.
+accuracy:  77.04%; precision:  47.37%; recall:   0.47%; FB1:   0.94
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  25.00%; recall:   0.53%; FB1:   1.04  8
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  63.64%; recall:   1.94%; FB1:   3.76  11
+
+
+tst   26      1.2209e-01    14.0366     0.2370    47.3700     0.4700     0.9400     1.3300         20
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  27      1.0958e-01   288.8469
+trn   27      1.0780e-01    85.4930     0.2180     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 38 phrases; correct: 25.
+accuracy:  78.38%; precision:  65.79%; recall:   1.34%; FB1:   2.62
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  64.29%; recall:   2.80%; FB1:   5.37  14
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  66.67%; recall:   5.82%; FB1:  10.70  24
+
+
+dev   27      1.1067e-01    11.5527     0.2246    65.7900     1.3400     2.6200     2.6200         27
+
+processed 15061 tokens with 1906 phrases; found: 35 phrases; correct: 14.
+accuracy:  76.99%; precision:  40.00%; recall:   0.73%; FB1:   1.44
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  25.00%; recall:   0.79%; FB1:   1.54  12
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  47.83%; recall:   3.05%; FB1:   5.73  23
+
+
+tst   27      1.2246e-01    13.1899     0.2373    40.0000     0.7300     1.4400     1.4400         27
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  28      1.0927e-01   269.2475
+trn   28      1.0868e-01    87.8135     0.2191     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 10 phrases; correct: 1.
+accuracy:  78.18%; precision:  10.00%; recall:   0.05%; FB1:   0.11
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  10.00%; recall:   0.31%; FB1:   0.60  10
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   28      1.1147e-01    12.6258     0.2261    10.0000     0.0500     0.1100     2.6200         27
+
+processed 15061 tokens with 1906 phrases; found: 6 phrases; correct: 1.
+accuracy:  76.98%; precision:  16.67%; recall:   0.05%; FB1:   0.10
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  16.67%; recall:   0.26%; FB1:   0.52  6
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   28      1.2229e-01    14.0162     0.2375    16.6700     0.0500     0.1000     1.4400         27
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  29      1.0951e-01   289.3848
+trn   29      1.0740e-01    89.0847     0.2159     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 32 phrases; correct: 21.
+accuracy:  78.46%; precision:  65.62%; recall:   1.12%; FB1:   2.21
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  50.00%; recall:   2.80%; FB1:   5.31  18
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  85.71%; recall:   4.36%; FB1:   8.30  14
+
+
+dev   29      1.0987e-01    11.8200     0.2189    65.6200     1.1200     2.2100     2.6200         27
+
+processed 15061 tokens with 1906 phrases; found: 24 phrases; correct: 11.
+accuracy:  77.21%; precision:  45.83%; recall:   0.58%; FB1:   1.14
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  23.08%; recall:   0.79%; FB1:   1.53  13
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  72.73%; recall:   2.22%; FB1:   4.30  11
+
+
+tst   29      1.2218e-01    13.6957     0.2322    45.8300     0.5800     1.1400     1.4400         27
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  30      1.1226e-01   283.6456
+trn   30      1.1146e-01    84.8643     0.2194     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 6 phrases; correct: 6.
+accuracy:  78.22%; precision: 100.00%; recall:   0.32%; FB1:   0.64
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision: 100.00%; recall:   0.93%; FB1:   1.85  3
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision: 100.00%; recall:   1.09%; FB1:   2.16  3
+
+
+dev   30      1.1364e-01    11.3141     0.2261   100.0000     0.3200     0.6400     2.6200         27
+
+processed 15061 tokens with 1906 phrases; found: 3 phrases; correct: 2.
+accuracy:  77.03%; precision:  66.67%; recall:   0.10%; FB1:   0.21
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision: 100.00%; recall:   0.26%; FB1:   0.53  1
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  50.00%; recall:   0.28%; FB1:   0.55  2
+
+
+tst   30      1.2470e-01    13.7467     0.2376    66.6700     0.1000     0.2100     1.4400         27
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  31      1.1109e-01   285.8825
+trn   31      1.0887e-01    88.0904     0.2187     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 8 phrases; correct: 6.
+accuracy:  78.18%; precision:  75.00%; recall:   0.32%; FB1:   0.64
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  50.00%; recall:   0.62%; FB1:   1.23  4
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision: 100.00%; recall:   1.45%; FB1:   2.87  4
+
+
+dev   31      1.1184e-01    12.2948     0.2259    75.0000     0.3200     0.6400     2.6200         27
+
+processed 15061 tokens with 1906 phrases; found: 4 phrases; correct: 4.
+accuracy:  77.05%; precision: 100.00%; recall:   0.21%; FB1:   0.42
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision: 100.00%; recall:   0.26%; FB1:   0.53  1
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision: 100.00%; recall:   0.83%; FB1:   1.65  3
+
+
+tst   31      1.2285e-01    13.5233     0.2374   100.0000     0.2100     0.4200     1.4400         27
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  32      1.0971e-01   280.4008
+trn   32      1.0760e-01    90.0705     0.2157     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 39 phrases; correct: 25.
+accuracy:  78.08%; precision:  64.10%; recall:   1.34%; FB1:   2.62
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  45.00%; recall:   2.80%; FB1:   5.28  20
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  84.21%; recall:   5.82%; FB1:  10.88  19
+
+
+dev   32      1.1054e-01    12.3868     0.2208    64.1000     1.3400     2.6200     2.6200         27
+
+processed 15061 tokens with 1906 phrases; found: 31 phrases; correct: 14.
+accuracy:  76.96%; precision:  45.16%; recall:   0.73%; FB1:   1.45
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  21.43%; recall:   0.79%; FB1:   1.53  14
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  64.71%; recall:   3.05%; FB1:   5.82  17
+
+
+tst   32      1.2237e-01    13.7224     0.2331    45.1600     0.7300     1.4500     1.4500         32
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  33      1.0901e-01   291.0493
+trn   33      1.0687e-01    88.6022     0.2150     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 34 phrases; correct: 21.
+accuracy:  78.16%; precision:  61.76%; recall:   1.12%; FB1:   2.20
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  45.00%; recall:   2.80%; FB1:   5.28  20
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  85.71%; recall:   4.36%; FB1:   8.30  14
+
+
+dev   33      1.0969e-01    11.8184     0.2203    61.7600     1.1200     2.2000     2.6200         27
+
+processed 15061 tokens with 1906 phrases; found: 29 phrases; correct: 10.
+accuracy:  76.99%; precision:  34.48%; recall:   0.52%; FB1:   1.03
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  11.76%; recall:   0.53%; FB1:   1.01  17
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  66.67%; recall:   2.22%; FB1:   4.29  12
+
+
+tst   33      1.2111e-01    13.4364     0.2331    34.4800     0.5200     1.0300     1.4500         32
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  34      1.0882e-01   275.8062
+trn   34      1.0718e-01    86.9284     0.2175     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 35 phrases; correct: 24.
+accuracy:  78.46%; precision:  68.57%; recall:   1.28%; FB1:   2.52
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  56.25%; recall:   2.80%; FB1:   5.34  16
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  78.95%; recall:   5.45%; FB1:  10.20  19
+
+
+dev   34      1.0940e-01    12.3571     0.2237    68.5700     1.2800     2.5200     2.6200         27
+
+processed 15061 tokens with 1906 phrases; found: 21 phrases; correct: 10.
+accuracy:  77.09%; precision:  47.62%; recall:   0.52%; FB1:   1.04
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  22.22%; recall:   0.53%; FB1:   1.03  9
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  66.67%; recall:   2.22%; FB1:   4.29  12
+
+
+tst   34      1.2115e-01    13.7059     0.2366    47.6200     0.5200     1.0400     1.4500         32
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  35      1.0966e-01   289.0719
+trn   35      1.0729e-01    86.1659     0.2180     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 30 phrases; correct: 20.
+accuracy:  78.37%; precision:  66.67%; recall:   1.07%; FB1:   2.10
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  38.46%; recall:   1.56%; FB1:   2.99  13
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  88.24%; recall:   5.45%; FB1:  10.27  17
+
+
+dev   35      1.1004e-01    11.4435     0.2245    66.6700     1.0700     2.1000     2.6200         27
+
+processed 15061 tokens with 1906 phrases; found: 21 phrases; correct: 9.
+accuracy:  77.12%; precision:  42.86%; recall:   0.47%; FB1:   0.93
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  12.50%; recall:   0.26%; FB1:   0.52  8
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  61.54%; recall:   2.22%; FB1:   4.28  13
+
+
+tst   35      1.2157e-01    12.4893     0.2365    42.8600     0.4700     0.9300     1.4500         32
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  36      1.0922e-01   283.4073
+trn   36      1.0804e-01    83.5039     0.2163     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 42 phrases; correct: 25.
+accuracy:  78.05%; precision:  59.52%; recall:   1.34%; FB1:   2.61
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  45.00%; recall:   2.80%; FB1:   5.28  20
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  72.73%; recall:   5.82%; FB1:  10.77  22
+
+
+dev   36      1.1073e-01    12.0710     0.2210    59.5200     1.3400     2.6100     2.6200         27
+
+processed 15061 tokens with 1906 phrases; found: 30 phrases; correct: 12.
+accuracy:  76.98%; precision:  40.00%; recall:   0.63%; FB1:   1.24
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  15.38%; recall:   0.53%; FB1:   1.02  13
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  58.82%; recall:   2.77%; FB1:   5.29  17
+
+
+tst   36      1.2143e-01    14.2373     0.2349    40.0000     0.6300     1.2400     1.4500         32
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  37      1.0893e-01   286.8089
+trn   37      1.0705e-01    86.6895     0.2156     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 39 phrases; correct: 25.
+accuracy:  78.10%; precision:  64.10%; recall:   1.34%; FB1:   2.62
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  45.00%; recall:   2.80%; FB1:   5.28  20
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  84.21%; recall:   5.82%; FB1:  10.88  19
+
+
+dev   37      1.1037e-01    11.9624     0.2206    64.1000     1.3400     2.6200     2.6200         27
+
+processed 15061 tokens with 1906 phrases; found: 29 phrases; correct: 12.
+accuracy:  76.95%; precision:  41.38%; recall:   0.63%; FB1:   1.24
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  15.38%; recall:   0.53%; FB1:   1.02  13
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  62.50%; recall:   2.77%; FB1:   5.31  16
+
+
+tst   37      1.2051e-01    13.6949     0.2332    41.3800     0.6300     1.2400     1.4500         32
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  38      1.0966e-01   279.5577
+trn   38      1.0957e-01    88.1133     0.2196     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 0 phrases; correct: 0.
+accuracy:  78.15%; precision:   0.00%; recall:   0.00%; FB1:   0.00
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   38      1.1189e-01    11.2141     0.2267     0.0000     0.0000     0.0000     2.6200         27
+
+processed 15061 tokens with 1906 phrases; found: 2 phrases; correct: 2.
+accuracy:  77.03%; precision: 100.00%; recall:   0.10%; FB1:   0.21
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision: 100.00%; recall:   0.26%; FB1:   0.53  1
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision: 100.00%; recall:   0.28%; FB1:   0.55  1
+
+
+tst   38      1.2185e-01    14.0276     0.2376   100.0000     0.1000     0.2100     1.4500         32
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  39      1.1152e-01   290.9740
+trn   39      1.0808e-01    90.9164     0.2183     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 22 phrases; correct: 16.
+accuracy:  78.35%; precision:  72.73%; recall:   0.86%; FB1:   1.69
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  40.00%; recall:   1.25%; FB1:   2.42  10
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision: 100.00%; recall:   4.36%; FB1:   8.36  12
+
+
+dev   39      1.1088e-01    11.4849     0.2250    72.7300     0.8600     1.6900     2.6200         27
+
+processed 15061 tokens with 1906 phrases; found: 18 phrases; correct: 10.
+accuracy:  77.09%; precision:  55.56%; recall:   0.52%; FB1:   1.04
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  33.33%; recall:   0.53%; FB1:   1.04  6
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  66.67%; recall:   2.22%; FB1:   4.29  12
+
+
+tst   39      1.2288e-01    14.6516     0.2369    55.5600     0.5200     1.0400     1.4500         32
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  40      1.1020e-01   273.6338
+trn   40      1.0899e-01   237.6399     0.2191     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 12 phrases; correct: 4.
+accuracy:  78.24%; precision:  33.33%; recall:   0.21%; FB1:   0.42
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  33.33%; recall:   1.25%; FB1:   2.40  12
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   40      1.1152e-01   191.8112     0.2260    33.3300     0.2100     0.4200     2.6200         27
+
+processed 15061 tokens with 1906 phrases; found: 8 phrases; correct: 1.
+accuracy:  77.05%; precision:  12.50%; recall:   0.05%; FB1:   0.10
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  12.50%; recall:   0.26%; FB1:   0.52  8
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   40      1.2418e-01    12.6293     0.2374    12.5000     0.0500     0.1000     1.4500         32
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  41      1.0944e-01   287.4442
+trn   41      1.0702e-01    87.6439     0.2180     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 27 phrases; correct: 20.
+accuracy:  78.35%; precision:  74.07%; recall:   1.07%; FB1:   2.11
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  64.29%; recall:   2.80%; FB1:   5.37  14
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  84.62%; recall:   4.00%; FB1:   7.64  13
+
+
+dev   41      1.0975e-01    11.8025     0.2248    74.0700     1.0700     2.1100     2.6200         27
+
+processed 15061 tokens with 1906 phrases; found: 18 phrases; correct: 8.
+accuracy:  77.02%; precision:  44.44%; recall:   0.42%; FB1:   0.83
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  22.22%; recall:   0.53%; FB1:   1.03  9
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  66.67%; recall:   1.66%; FB1:   3.24  9
+
+
+tst   41      1.2164e-01    14.4850     0.2372    44.4400     0.4200     0.8300     1.4500         32
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  42      1.0851e-01   280.7829
+trn   42      1.0647e-01    87.2139     0.2146     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 43 phrases; correct: 26.
+accuracy:  78.42%; precision:  60.47%; recall:   1.39%; FB1:   2.72
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  42.86%; recall:   2.80%; FB1:   5.26  21
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  77.27%; recall:   6.18%; FB1:  11.45  22
+
+
+dev   42      1.0914e-01    11.6647     0.2181    60.4700     1.3900     2.7200     2.7200         42
+
+processed 15061 tokens with 1906 phrases; found: 32 phrases; correct: 12.
+accuracy:  77.12%; precision:  37.50%; recall:   0.63%; FB1:   1.24
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  14.29%; recall:   0.53%; FB1:   1.02  14
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  55.56%; recall:   2.77%; FB1:   5.28  18
+
+
+tst   42      1.1999e-01    13.7562     0.2327    37.5000     0.6300     1.2400     1.4500         32
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  43      1.0847e-01   288.4578
+trn   43      1.0639e-01    87.0420     0.2143     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 42 phrases; correct: 25.
+accuracy:  78.48%; precision:  59.52%; recall:   1.34%; FB1:   2.61
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  45.00%; recall:   2.80%; FB1:   5.28  20
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  72.73%; recall:   5.82%; FB1:  10.77  22
+
+
+dev   43      1.0930e-01    11.3206     0.2177    59.5200     1.3400     2.6100     2.7200         42
+
+processed 15061 tokens with 1906 phrases; found: 32 phrases; correct: 13.
+accuracy:  77.25%; precision:  40.62%; recall:   0.68%; FB1:   1.34
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  21.43%; recall:   0.79%; FB1:   1.53  14
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  55.56%; recall:   2.77%; FB1:   5.28  18
+
+
+tst   43      1.2125e-01    13.0213     0.2331    40.6200     0.6800     1.3400     1.4500         32
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  44      1.0809e-01   281.5102
+trn   44      1.0640e-01    88.6447     0.2149     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 41 phrases; correct: 26.
+accuracy:  78.48%; precision:  63.41%; recall:   1.39%; FB1:   2.72
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  47.37%; recall:   2.80%; FB1:   5.29  19
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  77.27%; recall:   6.18%; FB1:  11.45  22
+
+
+dev   44      1.0944e-01    11.5386     0.2185    63.4100     1.3900     2.7200     2.7200         42
+
+processed 15061 tokens with 1906 phrases; found: 28 phrases; correct: 13.
+accuracy:  77.26%; precision:  46.43%; recall:   0.68%; FB1:   1.34
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  18.18%; recall:   0.53%; FB1:   1.03  11
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  64.71%; recall:   3.05%; FB1:   5.82  17
+
+
+tst   44      1.2069e-01    13.8967     0.2334    46.4300     0.6800     1.3400     1.4500         32
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  45      1.0799e-01   291.5482
+trn   45      1.0611e-01    88.3850     0.2172     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 35 phrases; correct: 26.
+accuracy:  78.46%; precision:  74.29%; recall:   1.39%; FB1:   2.73
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  58.82%; recall:   3.12%; FB1:   5.92  17
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  88.89%; recall:   5.82%; FB1:  10.92  18
+
+
+dev   45      1.0915e-01    11.9010     0.2235    74.2900     1.3900     2.7300     2.7300         45
+
+processed 15061 tokens with 1906 phrases; found: 23 phrases; correct: 10.
+accuracy:  77.05%; precision:  43.48%; recall:   0.52%; FB1:   1.04
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  10.00%; recall:   0.26%; FB1:   0.52  10
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  69.23%; recall:   2.49%; FB1:   4.81  13
+
+
+tst   45      1.1999e-01    14.1325     0.2365    43.4800     0.5200     1.0400     1.4500         32
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  46      1.0806e-01   274.0432
+trn   46      1.0571e-01    84.6207     0.2136     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 39 phrases; correct: 26.
+accuracy:  78.21%; precision:  66.67%; recall:   1.39%; FB1:   2.72
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  50.00%; recall:   2.80%; FB1:   5.31  18
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  80.95%; recall:   6.18%; FB1:  11.49  21
+
+
+dev   46      1.0893e-01    11.8414     0.2199    66.6700     1.3900     2.7200     2.7300         45
+
+processed 15061 tokens with 1906 phrases; found: 32 phrases; correct: 13.
+accuracy:  77.15%; precision:  40.62%; recall:   0.68%; FB1:   1.34
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  16.67%; recall:   0.53%; FB1:   1.03  12
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  55.00%; recall:   3.05%; FB1:   5.77  20
+
+
+tst   46      1.1968e-01    13.5578     0.2314    40.6200     0.6800     1.3400     1.4500         32
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  47      1.0785e-01   285.9339
+trn   47      1.0583e-01    87.8896     0.2141     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 42 phrases; correct: 25.
+accuracy:  78.39%; precision:  59.52%; recall:   1.34%; FB1:   2.61
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  40.91%; recall:   2.80%; FB1:   5.25  22
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  80.00%; recall:   5.82%; FB1:  10.85  20
+
+
+dev   47      1.0922e-01    11.7161     0.2184    59.5200     1.3400     2.6100     2.7300         45
+
+processed 15061 tokens with 1906 phrases; found: 37 phrases; correct: 14.
+accuracy:  77.23%; precision:  37.84%; recall:   0.73%; FB1:   1.44
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  20.00%; recall:   1.06%; FB1:   2.01  20
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  58.82%; recall:   2.77%; FB1:   5.29  17
+
+
+tst   47      1.2023e-01    13.3775     0.2293    37.8400     0.7300     1.4400     1.4500         32
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  48      1.0817e-01   282.5609
+trn   48      1.0631e-01    86.6328     0.2174     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 39 phrases; correct: 26.
+accuracy:  78.41%; precision:  66.67%; recall:   1.39%; FB1:   2.72
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  50.00%; recall:   2.80%; FB1:   5.31  18
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  80.95%; recall:   6.18%; FB1:  11.49  21
+
+
+dev   48      1.0957e-01    11.4760     0.2241    66.6700     1.3900     2.7200     2.7300         45
+
+processed 15061 tokens with 1906 phrases; found: 31 phrases; correct: 15.
+accuracy:  77.05%; precision:  48.39%; recall:   0.79%; FB1:   1.55
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  30.77%; recall:   1.06%; FB1:   2.05  13
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  61.11%; recall:   3.05%; FB1:   5.80  18
+
+
+tst   48      1.2103e-01    13.2264     0.2369    48.3900     0.7900     1.5500     1.5500         48
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  49      1.0802e-01   288.1230
+trn   49      1.0678e-01    82.8355     0.2142     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 38 phrases; correct: 25.
+accuracy:  78.37%; precision:  65.79%; recall:   1.34%; FB1:   2.62
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  45.00%; recall:   2.80%; FB1:   5.28  20
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  88.89%; recall:   5.82%; FB1:  10.92  18
+
+
+dev   49      1.0968e-01    12.5263     0.2181    65.7900     1.3400     2.6200     2.7300         45
+
+processed 15061 tokens with 1906 phrases; found: 29 phrases; correct: 13.
+accuracy:  77.24%; precision:  44.83%; recall:   0.68%; FB1:   1.34
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  21.43%; recall:   0.79%; FB1:   1.53  14
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  66.67%; recall:   2.77%; FB1:   5.32  15
+
+
+tst   49      1.1968e-01    13.2354     0.2314    44.8300     0.6800     1.3400     1.5500         48
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  50      1.0804e-01   276.9954
+trn   50      1.0585e-01    87.9148     0.2143     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 39 phrases; correct: 27.
+accuracy:  78.16%; precision:  69.23%; recall:   1.44%; FB1:   2.83
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  52.63%; recall:   3.12%; FB1:   5.88  19
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  85.00%; recall:   6.18%; FB1:  11.53  20
+
+
+dev   50      1.0881e-01    11.7691     0.2202    69.2300     1.4400     2.8300     2.8300         50
+
+processed 15061 tokens with 1906 phrases; found: 31 phrases; correct: 13.
+accuracy:  77.31%; precision:  41.94%; recall:   0.68%; FB1:   1.34
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  16.67%; recall:   0.53%; FB1:   1.03  12
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  57.89%; recall:   3.05%; FB1:   5.79  19
+
+
+tst   50      1.1980e-01    14.1044     0.2280    41.9400     0.6800     1.3400     1.5500         48
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  51      1.0772e-01   292.6977
+trn   51      1.0630e-01    88.3751     0.2146     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 40 phrases; correct: 26.
+accuracy:  78.45%; precision:  65.00%; recall:   1.39%; FB1:   2.72
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  45.00%; recall:   2.80%; FB1:   5.28  20
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  85.00%; recall:   6.18%; FB1:  11.53  20
+
+
+dev   51      1.0920e-01    11.3883     0.2174    65.0000     1.3900     2.7200     2.8300         50
+
+processed 15061 tokens with 1906 phrases; found: 39 phrases; correct: 15.
+accuracy:  77.24%; precision:  38.46%; recall:   0.79%; FB1:   1.54
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  22.22%; recall:   1.06%; FB1:   2.02  18
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  52.38%; recall:   3.05%; FB1:   5.76  21
+
+
+tst   51      1.2255e-01    13.3747     0.2312    38.4600     0.7900     1.5400     1.5500         48
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  52      1.0795e-01   971.5560
+trn   52      1.0670e-01    88.0389     0.2146     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 32 phrases; correct: 22.
+accuracy:  78.52%; precision:  68.75%; recall:   1.18%; FB1:   2.31
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  42.86%; recall:   1.87%; FB1:   3.58  14
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  88.89%; recall:   5.82%; FB1:  10.92  18
+
+
+dev   52      1.0964e-01    11.7492     0.2179    68.7500     1.1800     2.3100     2.8300         50
+
+processed 15061 tokens with 1906 phrases; found: 23 phrases; correct: 10.
+accuracy:  77.30%; precision:  43.48%; recall:   0.52%; FB1:   1.04
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  11.11%; recall:   0.26%; FB1:   0.52  9
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  64.29%; recall:   2.49%; FB1:   4.80  14
+
+
+tst   52      1.2154e-01    13.2132     0.2329    43.4800     0.5200     1.0400     1.5500         48
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  53      1.0841e-01   283.9373
+trn   53      1.3221e-01    88.9621     0.2273     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 48 phrases; correct: 26.
+accuracy:  77.44%; precision:  54.17%; recall:   1.39%; FB1:   2.71
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  1
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  39.13%; recall:   2.80%; FB1:   5.23  23
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  70.83%; recall:   6.18%; FB1:  11.37  24
+
+
+dev   53      1.1869e-01    11.6924     0.2287    54.1700     1.3900     2.7100     2.8300         50
+
+processed 15061 tokens with 1906 phrases; found: 34 phrases; correct: 10.
+accuracy:  76.79%; precision:  29.41%; recall:   0.52%; FB1:   1.03
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  1
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   7.69%; recall:   0.26%; FB1:   0.51  13
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  45.00%; recall:   2.49%; FB1:   4.72  20
+
+
+tst   53      1.2808e-01    13.9581     0.2352    29.4100     0.5200     1.0300     1.5500         48
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  54      1.0886e-01   284.5319
+trn   54      1.1218e-01    83.0909     0.2146     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 42 phrases; correct: 26.
+accuracy:  78.10%; precision:  61.90%; recall:   1.39%; FB1:   2.72
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  45.00%; recall:   2.80%; FB1:   5.28  20
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  77.27%; recall:   6.18%; FB1:  11.45  22
+
+
+dev   54      1.1012e-01    11.6804     0.2206    61.9000     1.3900     2.7200     2.8300         50
+
+processed 15061 tokens with 1906 phrases; found: 33 phrases; correct: 12.
+accuracy:  77.22%; precision:  36.36%; recall:   0.63%; FB1:   1.24
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   7.14%; recall:   0.26%; FB1:   0.51  14
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  57.89%; recall:   3.05%; FB1:   5.79  19
+
+
+tst   54      1.2160e-01    13.7972     0.2306    36.3600     0.6300     1.2400     1.5500         48
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  55      1.0895e-01   289.0011
+trn   55      1.0747e-01    89.3443     0.2174     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 35 phrases; correct: 28.
+accuracy:  78.44%; precision:  80.00%; recall:   1.50%; FB1:   2.94
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  78.57%; recall:   3.43%; FB1:   6.57  14
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  80.95%; recall:   6.18%; FB1:  11.49  21
+
+
+dev   55      1.1067e-01    11.7738     0.2241    80.0000     1.5000     2.9400     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 31 phrases; correct: 15.
+accuracy:  77.09%; precision:  48.39%; recall:   0.79%; FB1:   1.55
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  36.36%; recall:   1.06%; FB1:   2.06  11
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  55.00%; recall:   3.05%; FB1:   5.77  20
+
+
+tst   55      1.2262e-01    13.3611     0.2365    48.3900     0.7900     1.5500     1.5500         48
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  56      1.0935e-01   275.0254
+trn   56      1.0840e-01    90.0286     0.2177     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 26 phrases; correct: 23.
+accuracy:  78.43%; precision:  88.46%; recall:   1.23%; FB1:   2.42
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  75.00%; recall:   2.80%; FB1:   5.41  12
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision: 100.00%; recall:   5.09%; FB1:   9.69  14
+
+
+dev   56      1.1173e-01    11.5015     0.2242    88.4600     1.2300     2.4200     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 15 phrases; correct: 9.
+accuracy:  77.10%; precision:  60.00%; recall:   0.47%; FB1:   0.94
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  33.33%; recall:   0.53%; FB1:   1.04  6
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  77.78%; recall:   1.94%; FB1:   3.78  9
+
+
+tst   56      1.2326e-01    13.5109     0.2367    60.0000     0.4700     0.9400     1.5500         48
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  57      1.0909e-01   292.1598
+trn   57      1.1012e-01    87.1718     0.2189     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 14 phrases; correct: 10.
+accuracy:  78.25%; precision:  71.43%; recall:   0.53%; FB1:   1.06
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  4
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision: 100.00%; recall:   3.64%; FB1:   7.02  10
+
+
+dev   57      1.1316e-01    11.9707     0.2259    71.4300     0.5300     1.0600     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 8 phrases; correct: 5.
+accuracy:  77.04%; precision:  62.50%; recall:   0.26%; FB1:   0.52
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:   0.00%; recall:   0.00%; FB1:   0.00  2
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  83.33%; recall:   1.39%; FB1:   2.72  6
+
+
+tst   57      1.2489e-01    13.5569     0.2375    62.5000     0.2600     0.5200     1.5500         48
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  58      1.0963e-01   283.8107
+trn   58      1.0699e-01    88.7688     0.2179     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 35 phrases; correct: 26.
+accuracy:  78.39%; precision:  74.29%; recall:   1.39%; FB1:   2.73
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  64.29%; recall:   2.80%; FB1:   5.37  14
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  80.95%; recall:   6.18%; FB1:  11.49  21
+
+
+dev   58      1.0999e-01    11.3839     0.2243    74.2900     1.3900     2.7300     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 32 phrases; correct: 13.
+accuracy:  76.95%; precision:  40.62%; recall:   0.68%; FB1:   1.34
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  14.29%; recall:   0.53%; FB1:   1.02  14
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  61.11%; recall:   3.05%; FB1:   5.80  18
+
+
+tst   58      1.2370e-01    13.3653     0.2376    40.6200     0.6800     1.3400     1.5500         48
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  59      1.0912e-01   285.6146
+trn   59      1.0770e-01    87.0584     0.2185     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 12 phrases; correct: 10.
+accuracy:  78.32%; precision:  83.33%; recall:   0.53%; FB1:   1.06
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  83.33%; recall:   3.12%; FB1:   6.01  12
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   59      1.0985e-01    10.5428     0.2251    83.3300     0.5300     1.0600     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 9 phrases; correct: 2.
+accuracy:  76.97%; precision:  22.22%; recall:   0.10%; FB1:   0.21
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  22.22%; recall:   0.53%; FB1:   1.03  9
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   59      1.2799e-01    12.7698     0.2375    22.2200     0.1000     0.2100     1.5500         48
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  60      1.0845e-01   282.2321
+trn   60      1.0609e-01    88.9502     0.2174     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 32 phrases; correct: 25.
+accuracy:  78.42%; precision:  78.12%; recall:   1.34%; FB1:   2.63
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  61.54%; recall:   2.49%; FB1:   4.79  13
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  89.47%; recall:   6.18%; FB1:  11.56  19
+
+
+dev   60      1.0916e-01    11.7751     0.2241    78.1200     1.3400     2.6300     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 28 phrases; correct: 13.
+accuracy:  77.01%; precision:  46.43%; recall:   0.68%; FB1:   1.34
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  18.18%; recall:   0.53%; FB1:   1.03  11
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  64.71%; recall:   3.05%; FB1:   5.82  17
+
+
+tst   60      1.2090e-01    14.1840     0.2371    46.4300     0.6800     1.3400     1.5500         48
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  61      1.0782e-01   293.8386
+trn   61      1.0598e-01    90.4146     0.2174     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 37 phrases; correct: 27.
+accuracy:  78.43%; precision:  72.97%; recall:   1.44%; FB1:   2.83
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  58.82%; recall:   3.12%; FB1:   5.92  17
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  85.00%; recall:   6.18%; FB1:  11.53  20
+
+
+dev   61      1.0894e-01    11.7834     0.2240    72.9700     1.4400     2.8300     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 35 phrases; correct: 16.
+accuracy:  77.02%; precision:  45.71%; recall:   0.84%; FB1:   1.65
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  31.25%; recall:   1.32%; FB1:   2.54  16
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  57.89%; recall:   3.05%; FB1:   5.79  19
+
+
+tst   61      1.2012e-01    13.4492     0.2369    45.7100     0.8400     1.6500     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  62      1.0743e-01   275.4072
+trn   62      1.0617e-01    83.4403     0.2148     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 40 phrases; correct: 25.
+accuracy:  78.62%; precision:  62.50%; recall:   1.34%; FB1:   2.62
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  42.86%; recall:   2.80%; FB1:   5.26  21
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  84.21%; recall:   5.82%; FB1:  10.88  19
+
+
+dev   62      1.0902e-01    12.1643     0.2174    62.5000     1.3400     2.6200     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 33 phrases; correct: 12.
+accuracy:  77.14%; precision:  36.36%; recall:   0.63%; FB1:   1.24
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  11.76%; recall:   0.53%; FB1:   1.01  17
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  62.50%; recall:   2.77%; FB1:   5.31  16
+
+
+tst   62      1.2159e-01    13.8613     0.2324    36.3600     0.6300     1.2400     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  63      1.0738e-01   295.4462
+trn   63      1.0575e-01    90.9477     0.2151     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 35 phrases; correct: 25.
+accuracy:  78.14%; precision:  71.43%; recall:   1.34%; FB1:   2.62
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  50.00%; recall:   2.80%; FB1:   5.31  18
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  94.12%; recall:   5.82%; FB1:  10.96  17
+
+
+dev   63      1.0894e-01    11.5932     0.2203    71.4300     1.3400     2.6200     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 31 phrases; correct: 13.
+accuracy:  76.96%; precision:  41.94%; recall:   0.68%; FB1:   1.34
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  18.75%; recall:   0.79%; FB1:   1.52  16
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  66.67%; recall:   2.77%; FB1:   5.32  15
+
+
+tst   63      1.2075e-01    13.2028     0.2328    41.9400     0.6800     1.3400     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  64      1.0710e-01   281.7243
+trn   64      1.0495e-01    90.8438     0.2139     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 36 phrases; correct: 25.
+accuracy:  78.50%; precision:  69.44%; recall:   1.34%; FB1:   2.62
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  50.00%; recall:   2.80%; FB1:   5.31  18
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  88.89%; recall:   5.82%; FB1:  10.92  18
+
+
+dev   64      1.0790e-01    10.7626     0.2172    69.4400     1.3400     2.6200     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 25 phrases; correct: 13.
+accuracy:  77.29%; precision:  52.00%; recall:   0.68%; FB1:   1.35
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  25.00%; recall:   0.79%; FB1:   1.54  12
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  76.92%; recall:   2.77%; FB1:   5.35  13
+
+
+tst   64      1.1931e-01    11.9781     0.2303    52.0000     0.6800     1.3500     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  65      1.0713e-01   281.5373
+trn   65      1.0526e-01   263.4793     0.2168     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 35 phrases; correct: 24.
+accuracy:  78.58%; precision:  68.57%; recall:   1.28%; FB1:   2.52
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  42.11%; recall:   2.49%; FB1:   4.71  19
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision: 100.00%; recall:   5.82%; FB1:  11.00  16
+
+
+dev   65      1.0849e-01    11.4781     0.2216    68.5700     1.2800     2.5200     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 24 phrases; correct: 13.
+accuracy:  77.15%; precision:  54.17%; recall:   0.68%; FB1:   1.35
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  30.77%; recall:   1.06%; FB1:   2.05  13
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  81.82%; recall:   2.49%; FB1:   4.84  11
+
+
+tst   65      1.1901e-01    13.5552     0.2354    54.1700     0.6800     1.3500     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  66      1.0702e-01   282.9031
+trn   66      1.0493e-01    88.6199     0.2138     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 36 phrases; correct: 24.
+accuracy:  78.26%; precision:  66.67%; recall:   1.28%; FB1:   2.52
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  40.00%; recall:   2.49%; FB1:   4.69  20
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision: 100.00%; recall:   5.82%; FB1:  11.00  16
+
+
+dev   66      1.0834e-01    12.3585     0.2192    66.6700     1.2800     2.5200     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 23 phrases; correct: 12.
+accuracy:  77.31%; precision:  52.17%; recall:   0.63%; FB1:   1.24
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  25.00%; recall:   0.79%; FB1:   1.54  12
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  81.82%; recall:   2.49%; FB1:   4.84  11
+
+
+tst   66      1.1907e-01    14.1604     0.2296    52.1700     0.6300     1.2400     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  67      1.0669e-01   290.9733
+trn   67      1.0474e-01    86.3825     0.2142     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 42 phrases; correct: 26.
+accuracy:  78.14%; precision:  61.90%; recall:   1.39%; FB1:   2.72
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  47.37%; recall:   2.80%; FB1:   5.29  19
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  73.91%; recall:   6.18%; FB1:  11.41  23
+
+
+dev   67      1.0798e-01    11.1236     0.2202    61.9000     1.3900     2.7200     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 34 phrases; correct: 15.
+accuracy:  77.20%; precision:  44.12%; recall:   0.79%; FB1:   1.55
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  25.00%; recall:   1.06%; FB1:   2.03  16
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  61.11%; recall:   3.05%; FB1:   5.80  18
+
+
+tst   67      1.1946e-01    12.7419     0.2304    44.1200     0.7900     1.5500     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  68      1.0682e-01   277.8649
+trn   68      1.0460e-01    82.8903     0.2141     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 32 phrases; correct: 21.
+accuracy:  78.40%; precision:  65.62%; recall:   1.12%; FB1:   2.21
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  40.00%; recall:   1.87%; FB1:   3.57  15
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  88.24%; recall:   5.45%; FB1:  10.27  17
+
+
+dev   68      1.0835e-01    12.0623     0.2186    65.6200     1.1200     2.2100     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 18 phrases; correct: 10.
+accuracy:  77.33%; precision:  55.56%; recall:   0.52%; FB1:   1.04
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  25.00%; recall:   0.53%; FB1:   1.04  8
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  80.00%; recall:   2.22%; FB1:   4.31  10
+
+
+tst   68      1.1946e-01    14.4281     0.2299    55.5600     0.5200     1.0400     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  69      1.0687e-01   288.6359
+trn   69      1.0454e-01    90.4814     0.2146     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 37 phrases; correct: 25.
+accuracy:  78.64%; precision:  67.57%; recall:   1.34%; FB1:   2.62
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  47.37%; recall:   2.80%; FB1:   5.29  19
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  88.89%; recall:   5.82%; FB1:  10.92  18
+
+
+dev   69      1.0810e-01    11.4325     0.2165    67.5700     1.3400     2.6200     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 25 phrases; correct: 11.
+accuracy:  77.25%; precision:  44.00%; recall:   0.58%; FB1:   1.14
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  16.67%; recall:   0.53%; FB1:   1.03  12
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  69.23%; recall:   2.49%; FB1:   4.81  13
+
+
+tst   69      1.1846e-01    12.4257     0.2315    44.0000     0.5800     1.1400     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  70      1.0637e-01   284.7874
+trn   70      1.0421e-01    83.7870     0.2136     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 36 phrases; correct: 25.
+accuracy:  78.31%; precision:  69.44%; recall:   1.34%; FB1:   2.62
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  47.37%; recall:   2.80%; FB1:   5.29  19
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  94.12%; recall:   5.82%; FB1:  10.96  17
+
+
+dev   70      1.0764e-01    10.6194     0.2190    69.4400     1.3400     2.6200     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 25 phrases; correct: 11.
+accuracy:  77.41%; precision:  44.00%; recall:   0.58%; FB1:   1.14
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  15.38%; recall:   0.53%; FB1:   1.02  13
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  1
+                T: precision:  81.82%; recall:   2.49%; FB1:   4.84  11
+
+
+tst   70      1.1750e-01    13.2150     0.2303    44.0000     0.5800     1.1400     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  71      1.0604e-01   289.4749
+trn   71      1.0500e-01    85.0124     0.2140     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 35 phrases; correct: 23.
+accuracy:  78.54%; precision:  65.71%; recall:   1.23%; FB1:   2.41
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  47.06%; recall:   2.49%; FB1:   4.73  17
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  83.33%; recall:   5.45%; FB1:  10.24  18
+
+
+dev   71      1.0919e-01    11.2717     0.2170    65.7100     1.2300     2.4100     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 30 phrases; correct: 11.
+accuracy:  77.37%; precision:  36.67%; recall:   0.58%; FB1:   1.14
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  15.38%; recall:   0.53%; FB1:   1.02  13
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  52.94%; recall:   2.49%; FB1:   4.76  17
+
+
+tst   71      1.1849e-01    13.2589     0.2278    36.6700     0.5800     1.1400     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  72      1.0700e-01   283.1667
+trn   72      1.0440e-01    87.3341     0.2136     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 39 phrases; correct: 25.
+accuracy:  78.13%; precision:  64.10%; recall:   1.34%; FB1:   2.62
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  45.00%; recall:   2.80%; FB1:   5.28  20
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  84.21%; recall:   5.82%; FB1:  10.88  19
+
+
+dev   72      1.0818e-01    11.4688     0.2203    64.1000     1.3400     2.6200     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 29 phrases; correct: 13.
+accuracy:  77.28%; precision:  44.83%; recall:   0.68%; FB1:   1.34
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  23.08%; recall:   0.79%; FB1:   1.53  13
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  62.50%; recall:   2.77%; FB1:   5.31  16
+
+
+tst   72      1.1842e-01    13.5531     0.2298    44.8300     0.6800     1.3400     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  73      1.0584e-01   291.2607
+trn   73      1.0387e-01    84.9631     0.2131     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 38 phrases; correct: 24.
+accuracy:  78.22%; precision:  63.16%; recall:   1.28%; FB1:   2.51
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  42.11%; recall:   2.49%; FB1:   4.71  19
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  84.21%; recall:   5.82%; FB1:  10.88  19
+
+
+dev   73      1.0779e-01    11.5094     0.2197    63.1600     1.2800     2.5100     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 29 phrases; correct: 13.
+accuracy:  77.31%; precision:  44.83%; recall:   0.68%; FB1:   1.34
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  23.08%; recall:   0.79%; FB1:   1.53  13
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  62.50%; recall:   2.77%; FB1:   5.31  16
+
+
+tst   73      1.1930e-01    13.8037     0.2298    44.8300     0.6800     1.3400     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  74      1.0697e-01   279.2290
+trn   74      1.0540e-01    84.8068     0.2142     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 45 phrases; correct: 28.
+accuracy:  78.37%; precision:  62.22%; recall:   1.50%; FB1:   2.92
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  47.83%; recall:   3.43%; FB1:   6.40  23
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  77.27%; recall:   6.18%; FB1:  11.45  22
+
+
+dev   74      1.0880e-01    12.0939     0.2184    62.2200     1.5000     2.9200     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 38 phrases; correct: 13.
+accuracy:  76.95%; precision:  34.21%; recall:   0.68%; FB1:   1.34
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  16.67%; recall:   0.79%; FB1:   1.52  18
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  50.00%; recall:   2.77%; FB1:   5.25  20
+
+
+tst   74      1.2320e-01    13.5912     0.2311    34.2100     0.6800     1.3400     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  75      1.0697e-01   289.8009
+trn   75      1.0488e-01    85.8861     0.2135     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 28 phrases; correct: 17.
+accuracy:  78.48%; precision:  60.71%; recall:   0.91%; FB1:   1.79
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  44.44%; recall:   2.49%; FB1:   4.72  18
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  90.00%; recall:   3.27%; FB1:   6.32  10
+
+
+dev   75      1.0859e-01    11.0870     0.2171    60.7100     0.9100     1.7900     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 24 phrases; correct: 9.
+accuracy:  77.00%; precision:  37.50%; recall:   0.47%; FB1:   0.93
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  12.50%; recall:   0.53%; FB1:   1.02  16
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  87.50%; recall:   1.94%; FB1:   3.79  8
+
+
+tst   75      1.2358e-01    12.7534     0.2308    37.5000     0.4700     0.9300     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  76      1.0668e-01   286.7586
+trn   76      1.0561e-01    87.5477     0.2173     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 29 phrases; correct: 26.
+accuracy:  78.45%; precision:  89.66%; recall:   1.39%; FB1:   2.74
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  78.57%; recall:   3.43%; FB1:   6.57  14
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision: 100.00%; recall:   5.45%; FB1:  10.34  15
+
+
+dev   76      1.0816e-01    12.1141     0.2240    89.6600     1.3900     2.7400     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 18 phrases; correct: 11.
+accuracy:  77.14%; precision:  61.11%; recall:   0.58%; FB1:   1.14
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  25.00%; recall:   0.53%; FB1:   1.04  8
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  90.00%; recall:   2.49%; FB1:   4.85  10
+
+
+tst   76      1.1931e-01    13.8791     0.2364    61.1100     0.5800     1.1400     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  77      1.0670e-01   288.4057
+trn   77      1.0453e-01    85.2918     0.2137     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 37 phrases; correct: 23.
+accuracy:  78.50%; precision:  62.16%; recall:   1.23%; FB1:   2.41
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  47.06%; recall:   2.49%; FB1:   4.73  17
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  75.00%; recall:   5.45%; FB1:  10.17  20
+
+
+dev   77      1.0790e-01    11.4113     0.2179    62.1600     1.2300     2.4100     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 26 phrases; correct: 14.
+accuracy:  77.46%; precision:  53.85%; recall:   0.73%; FB1:   1.45
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  40.00%; recall:   1.06%; FB1:   2.06  10
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  62.50%; recall:   2.77%; FB1:   5.31  16
+
+
+tst   77      1.1746e-01    12.1021     0.2289    53.8500     0.7300     1.4500     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  78      1.0606e-01   281.3546
+trn   78      1.0358e-01    87.6216     0.2134     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 31 phrases; correct: 24.
+accuracy:  78.60%; precision:  77.42%; recall:   1.28%; FB1:   2.52
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  53.33%; recall:   2.49%; FB1:   4.76  15
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision: 100.00%; recall:   5.82%; FB1:  11.00  16
+
+
+dev   78      1.0694e-01    12.0697     0.2168    77.4200     1.2800     2.5200     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 21 phrases; correct: 13.
+accuracy:  77.48%; precision:  61.90%; recall:   0.68%; FB1:   1.35
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  30.00%; recall:   0.79%; FB1:   1.55  10
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  90.91%; recall:   2.77%; FB1:   5.38  11
+
+
+tst   78      1.1806e-01    13.7295     0.2286    61.9000     0.6800     1.3500     1.6500         61
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  79      1.0552e-01   290.8943
+trn   79      1.0355e-01    87.8375     0.2134     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 31 phrases; correct: 26.
+accuracy:  78.69%; precision:  83.87%; recall:   1.39%; FB1:   2.73
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  66.67%; recall:   3.12%; FB1:   5.95  15
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision: 100.00%; recall:   5.82%; FB1:  11.00  16
+
+
+dev   79      1.0677e-01    12.0850     0.2157    83.8700     1.3900     2.7300     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 24 phrases; correct: 16.
+accuracy:  77.58%; precision:  66.67%; recall:   0.84%; FB1:   1.66
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  50.00%; recall:   1.59%; FB1:   3.08  12
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  83.33%; recall:   2.77%; FB1:   5.36  12
+
+
+tst   79      1.1651e-01    13.8661     0.2275    66.6700     0.8400     1.6600     1.6600         79
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  80      1.0537e-01   284.8680
+trn   80      1.0411e-01    84.7833     0.2132     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 34 phrases; correct: 26.
+accuracy:  78.63%; precision:  76.47%; recall:   1.39%; FB1:   2.73
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  55.56%; recall:   3.12%; FB1:   5.90  18
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision: 100.00%; recall:   5.82%; FB1:  11.00  16
+
+
+dev   80      1.0775e-01    11.9992     0.2163    76.4700     1.3900     2.7300     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 26 phrases; correct: 14.
+accuracy:  77.49%; precision:  53.85%; recall:   0.73%; FB1:   1.45
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  30.77%; recall:   1.06%; FB1:   2.05  13
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  76.92%; recall:   2.77%; FB1:   5.35  13
+
+
+tst   80      1.1790e-01    13.1332     0.2287    53.8500     0.7300     1.4500     1.6600         79
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  81      1.0539e-01   289.7972
+trn   81      1.0409e-01    83.1208     0.2128     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 29 phrases; correct: 24.
+accuracy:  78.57%; precision:  82.76%; recall:   1.28%; FB1:   2.53
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  69.23%; recall:   2.80%; FB1:   5.39  13
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  93.75%; recall:   5.45%; FB1:  10.31  16
+
+
+dev   81      1.0719e-01    11.0331     0.2173    82.7600     1.2800     2.5300     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 23 phrases; correct: 12.
+accuracy:  77.52%; precision:  52.17%; recall:   0.63%; FB1:   1.24
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  36.36%; recall:   1.06%; FB1:   2.06  11
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  66.67%; recall:   2.22%; FB1:   4.29  12
+
+
+tst   81      1.2116e-01    12.6200     0.2278    52.1700     0.6300     1.2400     1.6600         79
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  82      1.0703e-01   288.3651
+trn   82      1.0403e-01    87.7301     0.2170     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 30 phrases; correct: 24.
+accuracy:  78.44%; precision:  80.00%; recall:   1.28%; FB1:   2.52
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  60.00%; recall:   2.80%; FB1:   5.36  15
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision: 100.00%; recall:   5.45%; FB1:  10.34  15
+
+
+dev   82      1.0740e-01    11.9528     0.2240    80.0000     1.2800     2.5200     2.9400         55
+
+processed 15061 tokens with 1906 phrases; found: 22 phrases; correct: 13.
+accuracy:  77.17%; precision:  59.09%; recall:   0.68%; FB1:   1.35
+                A: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                G: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                I: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                M: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                O: precision:  36.36%; recall:   1.06%; FB1:   2.06  11
+                P: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+                T: precision:  81.82%; recall:   2.49%; FB1:   4.84  11
+
+
+tst   82      1.2210e-01    13.5553     0.2360    59.0900     0.6800     1.3500     1.6600         79
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  83      1.0591e-01   292.9503

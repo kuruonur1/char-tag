@@ -1,0 +1,138 @@
+activation:	bi-lstm
+batch_norm:	0
+breaktrn:	0
+captrn:	500
+cdrop:	0.0
+charset:	[]
+decoder:	1
+drates:	[0.0, 0.5, 0.5, 0.5, 0.8]
+emb:	0
+eps:	1e-08
+fbias:	0.0
+fbmerge:	concat
+feat:	basic
+fepoch:	600
+gclip:	0
+gnoise:	False
+in2out:	0
+lang:	cze
+level:	char
+load:	
+log:	ner_cze_char_h_4_256_0_5_8
+lr:	0.001
+n_batch:	32
+n_hidden:	[256, 256, 256, 256]
+norm:	1
+opt:	adam
+recout:	0
+rep:	std
+rnn:	lazrnn
+sample:	0
+save:	True
+seed:	0
+shuf:	1
+sorted:	1
+tagging:	bio
+truncate:	-1
+base_log_name:	ahtapot-5-1:gpu5,ner_cze_char_h_4_256_0_5_8
+# of sents trn, dev, tst: 4644 572 577
+input: trn	maxlen: 625 minlen: 3 avglen: 142.17 stdlen: 90.55
+input: dev	maxlen: 593 minlen: 3 avglen: 142.58 stdlen: 91.08
+input: tst	maxlen: 627 minlen: 3 avglen: 144.16 stdlen: 92.89
+[u'c= ', u'c=!', u'c="', u'c=$', u'c=%', u'c=&', u"c='", u'c=(', u'c=)', u'c=*', u'c=+', u'c=,', u'c=-', u'c=.', u'c=/', u'c=0', u'c=1', u'c=2', u'c=3', u'c=4', u'c=5', u'c=6', u'c=7', u'c=8', u'c=9', u'c=:', u'c=;', u'c=<', u'c==', u'c=>', u'c=?', u'c=@', u'c=A', u'c=B', u'c=C', u'c=D', u'c=E', u'c=F', u'c=G', u'c=H', u'c=I', u'c=J', u'c=K', u'c=L', u'c=M', u'c=N', u'c=O', u'c=P', u'c=Q', u'c=R', u'c=S', u'c=T', u'c=U', u'c=V', u'c=W', u'c=X', u'c=Y', u'c=Z', u'c=[', u'c=\\', u'c=]', u'c=_', u'c=`', u'c=a', u'c=b', u'c=c', u'c=d', u'c=e', u'c=f', u'c=g', u'c=h', u'c=i', u'c=j', u'c=k', u'c=l', u'c=m', u'c=n', u'c=o', u'c=p', u'c=q', u'c=r', u'c=s', u'c=t', u'c=u', u'c=v', u'c=w', u'c=x', u'c=y', u'c=z', u'c=\xa7', u'c=\xae', u'c=\xb0', u'c=\xb5', u'c=\xc1', u'c=\xc9', u'c=\xcd', u'c=\xda', u'c=\xdc', u'c=\xdd', u'c=\xe1', u'c=\xe2', u'c=\xe4', u'c=\xe9', u'c=\xed', u'c=\xee', u'c=\xf1', u'c=\xf3', u'c=\xf6', u'c=\xfa', u'c=\xfc', u'c=\xfd', u'c=\u0107', u'c=\u010c', u'c=\u010d', u'c=\u010e', u'c=\u010f', u'c=\u0110', u'c=\u011a', u'c=\u011b', u'c=\u0139', u'c=\u013a', u'c=\u013d', u'c=\u0144', u'c=\u0147', u'c=\u0148', u'c=\u0158', u'c=\u0159', u'c=\u015b', u'c=\u0160', u'c=\u0161', u'c=\u0164', u'c=\u0165', u'c=\u016e', u'c=\u016f', u'c=\u017d', u'c=\u017e']
+['i-a' 'i-g' 'i-i' 'i-m' 'i-o' 'i-p' 'i-t' 'o']
+NF: 136 NC: 8
+Compiling functions...
+Compiling done.
+training the model...
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  1       1.1249e-01   258.9858
+trn   1       7.8152e-02    59.0555     0.1952     0.0000     0.0000     0.0000     0.0000          1
+dev   1       7.9887e-02     8.0100     0.1828    27.4600    21.4900    24.1100    24.1100          1
+tst   1       8.9095e-02     9.0119     0.1889    27.4200    22.0400    24.4300    24.4300          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  2       7.3736e-02   260.0891
+trn   2       6.3813e-02    59.0318     0.1525     0.0000     0.0000     0.0000     0.0000          1
+dev   2       6.4471e-02     8.0200     0.1429    38.5100    34.2100    36.2300    36.2300          2
+tst   2       7.6554e-02     9.1360     0.1525    34.9900    31.4800    33.1400    33.1400          2
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  3       6.1637e-02   259.8841
+trn   3       6.5986e-02    59.4872     0.1786     0.0000     0.0000     0.0000     0.0000          1
+dev   3       6.8116e-02     8.0061     0.1862    43.5300    15.8200    23.2100    36.2300          2
+tst   3       8.2343e-02     9.2691     0.1944    42.7400    16.3700    23.6700    33.1400          2
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  4       5.4586e-02   258.8198
+trn   4       4.6206e-02    59.2381     0.1141     0.0000     0.0000     0.0000     0.0000          1
+dev   4       4.9617e-02     8.1024     0.1156    48.4600    50.4000    49.4100    49.4100          4
+tst   4       6.2524e-02     9.0401     0.1251    45.2800    48.3700    46.7800    46.7800          4
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  5       4.9340e-02   258.8396
+trn   5       4.1256e-02    59.1153     0.1039     0.0000     0.0000     0.0000     0.0000          1
+dev   5       4.5132e-02     7.8533     0.1062    51.4500    54.1400    52.7600    52.7600          5
+tst   5       5.9278e-02     9.0440     0.1147    48.4800    52.5700    50.4400    50.4400          5
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  6       4.4932e-02   258.9060
+trn   6       3.9314e-02    59.1467     0.0999     0.0000     0.0000     0.0000     0.0000          1
+dev   6       4.6107e-02     7.8313     0.1085    50.2300    53.5500    51.8400    52.7600          5
+tst   6       5.6911e-02     9.1640     0.1121    48.8900    52.1500    50.4700    50.4700          6
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  7       4.6411e-02   259.1325
+trn   7       4.0308e-02    59.1337     0.1085     0.0000     0.0000     0.0000     0.0000          1
+dev   7       4.7749e-02     8.3574     0.1207    51.6100    53.0200    52.3100    52.7600          5
+tst   7       5.5298e-02     9.1951     0.1252    49.3000    51.9900    50.6100    50.6100          7
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  8       4.0428e-02   259.0522
+trn   8       3.1874e-02    59.4343     0.0846     0.0000     0.0000     0.0000     0.0000          1
+dev   8       4.1129e-02     7.9043     0.0960    56.6600    59.8100    58.1900    58.1900          8
+tst   8       5.2727e-02     9.4411     0.1038    52.6800    57.7100    55.0800    55.0800          8
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  9       4.8125e-02   649.4604
+trn   9       3.2285e-02    58.7239     0.0843     0.0000     0.0000     0.0000     0.0000          1
+dev   9       4.1584e-02     7.8218     0.0958    55.6600    60.7200    58.0800    58.1900          8
+tst   9       5.1480e-02     9.3527     0.1061    52.1800    57.7600    54.8300    55.0800          8
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  10      3.6581e-02   799.2413
+trn   10      2.8998e-02   269.8709     0.0788     0.0000     0.0000     0.0000     0.0000          1
+dev   10      3.9252e-02     8.3187     0.0902    57.4100    62.5300    59.8600    59.8600         10
+tst   10      5.1120e-02     9.3645     0.1045    53.0100    59.1300    55.9000    55.9000         10
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  11      3.3347e-02   950.4347
+trn   11      2.7355e-02    59.4060     0.0763     0.0000     0.0000     0.0000     0.0000          1
+dev   11      4.2418e-02   248.0972     0.0917    57.5900    60.4500    58.9800    59.8600         10
+tst   11      5.4203e-02    33.7848     0.1024    54.0600    58.3900    56.1400    56.1400         11
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  12      3.7346e-02   740.3674
+trn   12      2.5871e-02   149.3764     0.0717     0.0000     0.0000     0.0000     0.0000          1
+dev   12      3.9083e-02     8.1140     0.0894    58.0000    61.7900    59.8300    59.8600         10
+tst   12      4.8990e-02     9.4637     0.1036    54.8700    58.8700    56.8000    56.8000         12
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  13      3.0323e-02   262.7830
+trn   13      2.3380e-02    85.1484     0.0661     0.0000     0.0000     0.0000     0.0000          1
+dev   13      3.9145e-02    24.1434     0.0920    57.1400    61.6200    59.3000    59.8600         10
+tst   13      4.7740e-02    11.1905     0.0989    54.9900    60.3900    57.5600    57.5600         13
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  14      2.7029e-02   266.9010
+trn   14      2.0888e-02    62.6271     0.0611     0.0000     0.0000     0.0000     0.0000          1
+dev   14      4.1518e-02     8.3670     0.0906    58.4500    62.3200    60.3200    60.3200         14
+tst   14      5.6868e-02     9.2955     0.0991    56.7000    60.1300    58.3700    58.3700         14
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  15      2.6317e-02   263.9314
+trn   15      2.0207e-02    63.0214     0.0584     0.0000     0.0000     0.0000     0.0000          1
+dev   15      3.9773e-02     7.8787     0.0860    58.3100    64.1400    61.0800    61.0800         15
+tst   15      5.3870e-02     9.3110     0.0959    55.4500    61.6500    58.3900    58.3900         15
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 

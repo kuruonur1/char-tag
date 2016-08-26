@@ -1,0 +1,1068 @@
+activation:	bi-lstm
+batch_norm:	0
+breaktrn:	0
+captrn:	500
+cdrop:	0.0
+charset:	[]
+decoder:	1
+drates:	[0.2, 0.5, 0.5, 0.5, 0.5, 0.5, 0.8]
+emb:	0
+eps:	1e-08
+fbias:	0.0
+fbmerge:	concat
+feat:	basic
+fepoch:	600
+gclip:	0
+gnoise:	False
+in2out:	0
+lang:	chu
+level:	char
+load:	
+log:	chunk_char_h_6_64
+lr:	0.001
+n_batch:	32
+n_hidden:	[64, 64, 64, 64, 64, 64]
+norm:	1
+opt:	adam
+recout:	0
+rep:	std
+rnn:	lazrnn
+sample:	0
+save:	True
+shuf:	1
+sorted:	1
+tagging:	bio
+truncate:	-1
+base_log_name:	iui-5-0:gpu0,chunk_char_h_6_64
+# of sents trn, dev, tst: 7610 1000 2012
+input: trn	maxlen: 250 minlen: 1 avglen: 121.73 stdlen: 54.60
+input: dev	maxlen: 385 minlen: 5 avglen: 128.28 stdlen: 63.29
+input: tst	maxlen: 412 minlen: 7 avglen: 129.13 stdlen: 61.67
+[u'c= ', u'c=!', u'c=#', u'c=$', u'c=%', u'c=&', u"c='", u'c=*', u'c=,', u'c=-', u'c=.', u'c=/', u'c=0', u'c=1', u'c=2', u'c=3', u'c=4', u'c=5', u'c=6', u'c=7', u'c=8', u'c=9', u'c=:', u'c=;', u'c==', u'c=?', u'c=@', u'c=A', u'c=B', u'c=C', u'c=D', u'c=E', u'c=F', u'c=G', u'c=H', u'c=I', u'c=J', u'c=K', u'c=L', u'c=M', u'c=N', u'c=O', u'c=P', u'c=Q', u'c=R', u'c=S', u'c=T', u'c=U', u'c=V', u'c=W', u'c=X', u'c=Y', u'c=Z', u'c=\\', u'c=`', u'c=a', u'c=b', u'c=c', u'c=d', u'c=e', u'c=f', u'c=g', u'c=h', u'c=i', u'c=j', u'c=k', u'c=l', u'c=m', u'c=n', u'c=o', u'c=p', u'c=q', u'c=r', u'c=s', u'c=t', u'c=u', u'c=v', u'c=w', u'c=x', u'c=y', u'c=z']
+c=  c=! c=# c=$ c=% c=& c=' c=* c=, c=- c=. c=/ c=0 c=1 c=2 c=3 c=4 c=5 c=6 c=7 c=8 c=9 c=: c=; c== c=? c=@ c=A c=B c=C c=D c=E c=F c=G c=H c=I c=J c=K c=L c=M c=N c=O c=P c=Q c=R c=S c=T c=U c=V c=W c=X c=Y c=Z c=\ c=` c=a c=b c=c c=d c=e c=f c=g c=h c=i c=j c=k c=l c=m c=n c=o c=p c=q c=r c=s c=t c=u c=v c=w c=x c=y c=z
+['i-adjp' 'i-advp' 'i-conjp' 'i-intj' 'i-lst' 'i-np' 'i-pp' 'i-prt'
+ 'i-sbar' 'i-ucp' 'i-vp' 'o']
+NF: 81 NC: 12
+[[  1.         -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339   1.         -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339   1.         -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339   1.
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.         -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339   1.         -36.04365339 -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339   1.
+  -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.        ]]
+[[  1.         -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.        ]
+ [-36.04365339   1.         -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.        ]
+ [-36.04365339 -36.04365339   1.         -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.        ]
+ [-36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.        ]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.        ]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339   1.
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339   1.        ]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.         -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.        ]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339   1.         -36.04365339 -36.04365339
+  -36.04365339   1.        ]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339   1.        ]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+    1.        ]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339   1.
+    1.        ]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.        ]]
+[[  1.         -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339   1.         -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339   1.         -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339   1.
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.         -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339   1.         -36.04365339 -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339   1.
+  -36.04365339]
+ [  1.           1.           1.           1.           1.           1.
+    1.           1.           1.           1.           1.           1.        ]]
+l_in: (None, None, 81)
+l_mask: (None, None)
+l_drop: (None, None, 81)
+l_forward: (None, None, 64)
+l_backward: (None, None, 64)
+l_fbmerge: (None, None, 128)
+l_forward: (None, None, 64)
+l_backward: (None, None, 64)
+l_fbmerge: (None, None, 128)
+l_forward: (None, None, 64)
+l_backward: (None, None, 64)
+l_fbmerge: (None, None, 128)
+l_forward: (None, None, 64)
+l_backward: (None, None, 64)
+l_fbmerge: (None, None, 128)
+l_forward: (None, None, 64)
+l_backward: (None, None, 64)
+l_fbmerge: (None, None, 128)
+l_forward: (None, None, 64)
+l_backward: (None, None, 64)
+l_fbmerge: (None, None, 128)
+l_reshape: (None, 128)
+l_rec_out: (None, 12)
+l_out: (None, None, 12)
+[W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W, b]
+Compiling functions...
+Compiling done.
+training the model...
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  1       1.1067e-01   192.3414
+trn   1       9.9845e-02    47.4005     0.3806     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 1000 phrases; correct: 15.
+accuracy:  36.51%; precision:   1.50%; recall:   0.13%; FB1:   0.23
+             ADJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             ADVP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:   1.50%; recall:   0.24%; FB1:   0.42  1000
+               PP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   1       9.9881e-02     7.1522     0.3829     1.5000     0.1300     0.2300     0.2300          1
+
+processed 47377 tokens with 23852 phrases; found: 2012 phrases; correct: 41.
+accuracy:  37.65%; precision:   2.04%; recall:   0.17%; FB1:   0.32
+             ADJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             ADVP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:   2.04%; recall:   0.33%; FB1:   0.57  2012
+               PP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   1       9.7883e-02    13.6415     0.3733     2.0400     0.1700     0.3200     0.3200          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  2       1.0261e-01   193.1867
+trn   2       9.8765e-02    47.6594     0.3802     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 1000 phrases; correct: 15.
+accuracy:  36.52%; precision:   1.50%; recall:   0.13%; FB1:   0.23
+             ADJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             ADVP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:   1.50%; recall:   0.24%; FB1:   0.42  1000
+               PP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+dev   2       9.8959e-02     7.1342     0.3828     1.5000     0.1300     0.2300     0.2300          1
+
+processed 47377 tokens with 23852 phrases; found: 2012 phrases; correct: 41.
+accuracy:  37.68%; precision:   2.04%; recall:   0.17%; FB1:   0.32
+             ADJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             ADVP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:   2.04%; recall:   0.33%; FB1:   0.57  2012
+               PP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+
+
+tst   2       9.6662e-02    13.6520     0.3730     2.0400     0.1700     0.3200     0.3200          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  3       9.5875e-02   193.3748
+trn   3       7.1394e-02    48.0509     0.3099     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 10180 phrases; correct: 3209.
+accuracy:  53.64%; precision:  31.52%; recall:  26.84%; FB1:  28.99
+             ADJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             ADVP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  31.53%; recall:  52.31%; FB1:  39.34  10179
+               PP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:   0.00%; recall:   0.00%; FB1:   0.00  1
+
+
+dev   3       7.1374e-02     7.1448     0.2984    31.5200    26.8400    28.9900    28.9900          3
+
+processed 47377 tokens with 23852 phrases; found: 20206 phrases; correct: 6539.
+accuracy:  54.45%; precision:  32.36%; recall:  27.41%; FB1:  29.68
+             ADJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             ADVP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  32.38%; recall:  52.64%; FB1:  40.09  20196
+               PP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:   0.00%; recall:   0.00%; FB1:   0.00  10
+
+
+tst   3       6.9201e-02    13.6927     0.2910    32.3600    27.4100    29.6800    29.6800          3
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  4       7.2979e-02   193.2038
+trn   4       5.0235e-02    48.1692     0.1909     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 14439 phrases; correct: 6856.
+accuracy:  70.57%; precision:  47.48%; recall:  57.33%; FB1:  51.95
+             ADJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             ADVP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  51.35%; recall:  60.69%; FB1:  55.63  7250
+               PP: precision:  80.98%; recall:  72.62%; FB1:  76.57  2129
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  27.85%; recall:  57.75%; FB1:  37.57  5060
+
+
+dev   4       4.9669e-02     7.2871     0.1874    47.4800    57.3300    51.9500    51.9500          4
+
+processed 47377 tokens with 23852 phrases; found: 28797 phrases; correct: 13859.
+accuracy:  70.99%; precision:  48.13%; recall:  58.10%; FB1:  52.65
+             ADJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             ADVP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  51.50%; recall:  60.86%; FB1:  55.79  14679
+               PP: precision:  80.69%; recall:  72.36%; FB1:  76.30  4314
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  28.74%; recall:  60.50%; FB1:  38.97  9804
+
+
+tst   4       4.8434e-02    13.7891     0.1811    48.1300    58.1000    52.6500    52.6500          4
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  5       6.0002e-02   192.0250
+trn   5       3.8082e-02    47.3865     0.1379     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 12848 phrases; correct: 7944.
+accuracy:  79.85%; precision:  61.83%; recall:  66.43%; FB1:  64.05
+             ADJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             ADVP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  60.91%; recall:  72.04%; FB1:  66.01  7255
+               PP: precision:  79.15%; recall:  85.21%; FB1:  82.07  2556
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  49.46%; recall:  61.56%; FB1:  54.85  3037
+
+
+dev   5       3.7830e-02     7.1384     0.1362    61.8300    66.4300    64.0500    64.0500          5
+
+processed 47377 tokens with 23852 phrases; found: 25728 phrases; correct: 15957.
+accuracy:  79.96%; precision:  62.02%; recall:  66.90%; FB1:  64.37
+             ADJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             ADVP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  60.66%; recall:  71.60%; FB1:  65.68  14661
+               PP: precision:  78.87%; recall:  84.87%; FB1:  81.76  5177
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  50.59%; recall:  63.98%; FB1:  56.50  5890
+
+
+tst   5       3.6455e-02    13.6656     0.1337    62.0200    66.9000    64.3700    64.3700          5
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  6       5.2839e-02   192.0976
+trn   6       3.4646e-02    47.4283     0.1274     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 12689 phrases; correct: 8237.
+accuracy:  81.40%; precision:  64.91%; recall:  68.88%; FB1:  66.84
+             ADJP: precision:  16.67%; recall:   0.46%; FB1:   0.90  6
+             ADVP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  62.22%; recall:  75.63%; FB1:  68.27  7456
+               PP: precision:  81.31%; recall:  86.52%; FB1:  83.84  2526
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  57.13%; recall:  63.24%; FB1:  60.03  2701
+
+
+dev   6       3.4842e-02     7.1508     0.1282    64.9100    68.8800    66.8400    66.8400          6
+
+processed 47377 tokens with 23852 phrases; found: 25447 phrases; correct: 16711.
+accuracy:  81.81%; precision:  65.67%; recall:  70.06%; FB1:  67.79
+             ADJP: precision:  22.22%; recall:   0.46%; FB1:   0.89  9
+             ADVP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  62.97%; recall:  76.16%; FB1:  68.94  15025
+               PP: precision:  80.90%; recall:  86.20%; FB1:  83.47  5126
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  58.65%; recall:  66.57%; FB1:  62.36  5287
+
+
+tst   6       3.3232e-02    13.5625     0.1250    65.6700    70.0600    67.7900    67.7900          6
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  7       4.8747e-02   226.9665
+trn   7       3.0663e-02    62.5651     0.1130     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 12601 phrases; correct: 8693.
+accuracy:  83.50%; precision:  68.99%; recall:  72.70%; FB1:  70.79
+             ADJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  5
+             ADVP: precision:  41.41%; recall:  18.10%; FB1:  25.19  198
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  67.40%; recall:  77.76%; FB1:  72.21  7077
+               PP: precision:  81.21%; recall:  88.67%; FB1:  84.78  2592
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  63.61%; recall:  71.15%; FB1:  67.17  2729
+
+
+dev   7       3.1082e-02     8.9289     0.1139    68.9900    72.7000    70.7900    70.7900          7
+
+processed 47377 tokens with 23852 phrases; found: 25232 phrases; correct: 17481.
+accuracy:  83.80%; precision:  69.28%; recall:  73.29%; FB1:  71.23
+             ADJP: precision:   5.88%; recall:   0.23%; FB1:   0.44  17
+             ADVP: precision:  35.33%; recall:  13.63%; FB1:  19.67  334
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  68.08%; recall:  78.07%; FB1:  72.74  14244
+               PP: precision:  80.55%; recall:  88.30%; FB1:  84.24  5274
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  63.70%; recall:  73.34%; FB1:  68.18  5363
+
+
+tst   7       2.9599e-02    15.0955     0.1112    69.2800    73.2900    71.2300    71.2300          7
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  8       4.5883e-02   246.0691
+trn   8       2.8132e-02    65.7107     0.1053     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 11909 phrases; correct: 8636.
+accuracy:  84.98%; precision:  72.52%; recall:  72.22%; FB1:  72.37
+             ADJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  2
+             ADVP: precision:  59.43%; recall:  13.91%; FB1:  22.54  106
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  71.17%; recall:  76.98%; FB1:  73.96  6635
+               PP: precision:  79.98%; recall:  90.69%; FB1:  85.00  2692
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  68.63%; recall:  69.59%; FB1:  69.11  2474
+
+
+dev   8       2.8298e-02    12.6152     0.1049    72.5200    72.2200    72.3700    72.3700          8
+
+processed 47377 tokens with 23852 phrases; found: 23926 phrases; correct: 17422.
+accuracy:  85.14%; precision:  72.82%; recall:  73.04%; FB1:  72.93
+             ADJP: precision:  20.00%; recall:   0.46%; FB1:   0.89  10
+             ADVP: precision:  58.38%; recall:  11.66%; FB1:  19.44  173
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  71.53%; recall:  77.19%; FB1:  74.26  13405
+               PP: precision:  79.85%; recall:  90.54%; FB1:  84.86  5455
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  69.10%; recall:  72.43%; FB1:  70.73  4883
+
+
+tst   8       2.7136e-02    16.0184     0.1037    72.8200    73.0400    72.9300    72.9300          8
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  9       4.3103e-02   246.3625
+trn   9       2.6335e-02    62.6318     0.1004     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 12281 phrases; correct: 8996.
+accuracy:  85.35%; precision:  73.25%; recall:  75.23%; FB1:  74.23
+             ADJP: precision:  33.33%; recall:   0.92%; FB1:   1.79  6
+             ADVP: precision:  44.44%; recall:  24.72%; FB1:  31.77  252
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  72.48%; recall:  80.31%; FB1:  76.19  6796
+               PP: precision:  82.44%; recall:  89.76%; FB1:  85.94  2585
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision: 100.00%; recall:   0.37%; FB1:   0.75  1
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  69.06%; recall:  74.75%; FB1:  71.80  2641
+
+
+dev   9       2.6842e-02     7.4704     0.1026    73.2500    75.2300    74.2300    74.2300          9
+
+processed 47377 tokens with 23852 phrases; found: 24536 phrases; correct: 18024.
+accuracy:  85.61%; precision:  73.46%; recall:  75.57%; FB1:  74.50
+             ADJP: precision:  16.67%; recall:   0.91%; FB1:   1.73  24
+             ADVP: precision:  45.06%; recall:  21.59%; FB1:  29.20  415
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  72.91%; recall:  80.16%; FB1:  76.36  13657
+               PP: precision:  82.30%; recall:  89.69%; FB1:  85.84  5243
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  80.00%; recall:   0.75%; FB1:   1.48  5
+               VP: precision:  68.51%; recall:  76.36%; FB1:  72.22  5192
+
+
+tst   9       2.5704e-02    17.6717     0.1003    73.4600    75.5700    74.5000    74.5000          9
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  10      4.1208e-02   244.6288
+trn   10      2.4984e-02    65.4155     0.0940     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 12203 phrases; correct: 9114.
+accuracy:  86.27%; precision:  74.69%; recall:  76.22%; FB1:  75.44
+             ADJP: precision:  66.67%; recall:   0.92%; FB1:   1.82  3
+             ADVP: precision:  54.22%; recall:  26.93%; FB1:  35.99  225
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  73.48%; recall:  81.15%; FB1:  77.12  6775
+               PP: precision:  84.24%; recall:  90.73%; FB1:  87.37  2557
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  62.86%; recall:  16.48%; FB1:  26.11  70
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  70.50%; recall:  74.34%; FB1:  72.37  2573
+
+
+dev   10      2.5370e-02     7.3072     0.0958    74.6900    76.2200    75.4400    75.4400         10
+
+processed 47377 tokens with 23852 phrases; found: 24427 phrases; correct: 18387.
+accuracy:  86.59%; precision:  75.27%; recall:  77.09%; FB1:  76.17
+             ADJP: precision:  50.00%; recall:   0.68%; FB1:   1.35  6
+             ADVP: precision:  50.40%; recall:  22.06%; FB1:  30.68  379
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  74.22%; recall:  81.37%; FB1:  77.63  13619
+               PP: precision:  85.11%; recall:  90.85%; FB1:  87.89  5136
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  70.65%; recall:  24.30%; FB1:  36.16  184
+               VP: precision:  70.23%; recall:  76.94%; FB1:  73.44  5103
+
+
+tst   10      2.4385e-02    19.5654     0.0934    75.2700    77.0900    76.1700    76.1700         10
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  11      3.9471e-02   248.3535
+trn   11      2.7621e-02    62.6204     0.1029     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 13092 phrases; correct: 9237.
+accuracy:  84.54%; precision:  70.55%; recall:  77.25%; FB1:  73.75
+             ADJP: precision:  39.19%; recall:  13.36%; FB1:  19.93  74
+             ADVP: precision:  48.28%; recall:  43.49%; FB1:  45.76  408
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  69.67%; recall:  78.24%; FB1:  73.71  6888
+               PP: precision:  85.52%; recall:  91.28%; FB1:  88.30  2534
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  58.74%; recall:  45.32%; FB1:  51.16  206
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  64.52%; recall:  78.85%; FB1:  70.97  2982
+
+
+dev   11      2.8077e-02     7.3249     0.1040    70.5500    77.2500    73.7500    75.4400         10
+
+processed 47377 tokens with 23852 phrases; found: 26338 phrases; correct: 18448.
+accuracy:  84.52%; precision:  70.04%; recall:  77.34%; FB1:  73.51
+             ADJP: precision:  34.33%; recall:  10.50%; FB1:  16.08  134
+             ADVP: precision:  48.89%; recall:  40.53%; FB1:  44.32  718
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  68.71%; recall:  77.27%; FB1:  72.74  13970
+               PP: precision:  86.07%; recall:  91.69%; FB1:  88.79  5125
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  64.99%; recall:  53.08%; FB1:  58.44  437
+               VP: precision:  63.10%; recall:  80.66%; FB1:  70.81  5954
+
+
+tst   11      2.7554e-02    22.0437     0.1032    70.0400    77.3400    73.5100    76.1700         10
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  12      3.8175e-02   254.2882
+trn   12      2.2718e-02    66.3296     0.0851     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 12039 phrases; correct: 9354.
+accuracy:  87.66%; precision:  77.70%; recall:  78.22%; FB1:  77.96
+             ADJP: precision:  65.22%; recall:   6.91%; FB1:  12.50  23
+             ADVP: precision:  61.24%; recall:  34.88%; FB1:  44.44  258
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  76.26%; recall:  82.52%; FB1:  79.27  6638
+               PP: precision:  86.03%; recall:  92.63%; FB1:  89.21  2556
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  56.97%; recall:  52.06%; FB1:  54.40  244
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  76.77%; recall:  72.99%; FB1:  74.83  2320
+
+
+dev   12      2.3478e-02     7.5427     0.0864    77.7000    78.2200    77.9600    77.9600         12
+
+processed 47377 tokens with 23852 phrases; found: 24112 phrases; correct: 18854.
+accuracy:  87.77%; precision:  78.19%; recall:  79.05%; FB1:  78.62
+             ADJP: precision:  37.14%; recall:   2.97%; FB1:   5.50  35
+             ADVP: precision:  63.92%; recall:  30.48%; FB1:  41.28  413
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  76.58%; recall:  82.88%; FB1:  79.60  13444
+               PP: precision:  86.85%; recall:  93.47%; FB1:  90.04  5178
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  61.51%; recall:  59.44%; FB1:  60.46  517
+               VP: precision:  76.62%; recall:  74.43%; FB1:  75.51  4525
+
+
+tst   12      2.2619e-02    21.4657     0.0856    78.1900    79.0500    78.6200    78.6200         12
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  13      3.6504e-02   251.4657
+trn   13      2.1032e-02    67.1392     0.0777     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 12090 phrases; correct: 9567.
+accuracy:  88.52%; precision:  79.13%; recall:  80.01%; FB1:  79.57
+             ADJP: precision:  64.29%; recall:   8.29%; FB1:  14.69  28
+             ADVP: precision:  60.06%; recall:  41.50%; FB1:  49.09  313
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  78.05%; recall:  84.04%; FB1:  80.93  6605
+               PP: precision:  87.85%; recall:  92.63%; FB1:  90.18  2503
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  61.99%; recall:  51.31%; FB1:  56.15  221
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  77.27%; recall:  76.64%; FB1:  76.95  2420
+
+
+dev   13      2.2102e-02    11.8330     0.0800    79.1300    80.0100    79.5700    79.5700         13
+
+processed 47377 tokens with 23852 phrases; found: 24171 phrases; correct: 19292.
+accuracy:  88.74%; precision:  79.81%; recall:  80.88%; FB1:  80.34
+             ADJP: precision:  46.81%; recall:   5.02%; FB1:   9.07  47
+             ADVP: precision:  59.37%; recall:  34.76%; FB1:  43.85  507
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  78.31%; recall:  84.07%; FB1:  81.09  13336
+               PP: precision:  88.36%; recall:  93.76%; FB1:  90.98  5105
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  71.96%; recall:  61.87%; FB1:  66.53  460
+               VP: precision:  78.12%; recall:  79.09%; FB1:  78.60  4716
+
+
+tst   13      2.1042e-02    14.0982     0.0781    79.8100    80.8800    80.3400    80.3400         13
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  14      3.5745e-02   257.4330
+trn   14      2.0049e-02    66.3509     0.0749     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 11964 phrases; correct: 9668.
+accuracy:  89.17%; precision:  80.81%; recall:  80.85%; FB1:  80.83
+             ADJP: precision:  52.17%; recall:  11.06%; FB1:  18.25  46
+             ADVP: precision:  64.29%; recall:  41.72%; FB1:  50.60  294
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  80.33%; recall:  84.69%; FB1:  82.45  6467
+               PP: precision:  89.22%; recall:  93.09%; FB1:  91.12  2477
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  61.35%; recall:  57.68%; FB1:  59.46  251
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  78.06%; recall:  77.70%; FB1:  77.88  2429
+
+
+dev   14      2.1043e-02     7.4894     0.0763    80.8100    80.8500    80.8300    80.8300         14
+
+processed 47377 tokens with 23852 phrases; found: 24036 phrases; correct: 19403.
+accuracy:  89.16%; precision:  80.72%; recall:  81.35%; FB1:  81.03
+             ADJP: precision:  40.00%; recall:   8.22%; FB1:  13.64  90
+             ADVP: precision:  64.53%; recall:  37.18%; FB1:  47.18  499
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  80.11%; recall:  84.12%; FB1:  82.07  13043
+               PP: precision:  89.34%; recall:  93.76%; FB1:  91.50  5049
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  68.18%; recall:  64.49%; FB1:  66.28  506
+               VP: precision:  77.13%; recall:  80.29%; FB1:  78.68  4849
+
+
+tst   14      2.0103e-02    22.4536     0.0760    80.7200    81.3500    81.0300    81.0300         14
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  15      3.4406e-02   254.2104
+trn   15      1.8641e-02    65.7924     0.0705     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 12088 phrases; correct: 9818.
+accuracy:  89.62%; precision:  81.22%; recall:  82.10%; FB1:  81.66
+             ADJP: precision:  71.79%; recall:  12.90%; FB1:  21.87  39
+             ADVP: precision:  59.21%; recall:  49.67%; FB1:  54.02  380
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  80.81%; recall:  85.69%; FB1:  83.18  6504
+               PP: precision:  89.06%; recall:  94.31%; FB1:  91.61  2514
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  61.89%; recall:  61.42%; FB1:  61.65  265
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  79.88%; recall:  78.11%; FB1:  78.99  2386
+
+
+dev   15      1.9729e-02    11.6653     0.0720    81.2200    82.1000    81.6600    81.6600         15
+
+processed 47377 tokens with 23852 phrases; found: 24242 phrases; correct: 19696.
+accuracy:  89.57%; precision:  81.25%; recall:  82.58%; FB1:  81.91
+             ADJP: precision:  46.67%; recall:   9.59%; FB1:  15.91  90
+             ADVP: precision:  58.93%; recall:  44.57%; FB1:  50.76  655
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  80.17%; recall:  85.06%; FB1:  82.54  13179
+               PP: precision:  88.86%; recall:  95.14%; FB1:  91.89  5151
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  66.85%; recall:  68.22%; FB1:  67.53  546
+               VP: precision:  81.37%; recall:  80.72%; FB1:  81.04  4621
+
+
+tst   15      1.9121e-02    17.8587     0.0726    81.2500    82.5800    81.9100    81.9100         15
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  16      3.4181e-02   245.3312
+trn   16      1.8128e-02    65.0016     0.0675     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 12030 phrases; correct: 9874.
+accuracy:  89.92%; precision:  82.08%; recall:  82.57%; FB1:  82.32
+             ADJP: precision:  67.14%; recall:  21.66%; FB1:  32.75  70
+             ADVP: precision:  63.92%; recall:  49.67%; FB1:  55.90  352
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  81.69%; recall:  85.67%; FB1:  83.63  6433
+               PP: precision:  88.81%; recall:  94.90%; FB1:  91.75  2537
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  64.17%; recall:  61.05%; FB1:  62.57  254
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  81.00%; recall:  79.14%; FB1:  80.06  2384
+
+
+dev   16      1.9347e-02     9.2178     0.0697    82.0800    82.5700    82.3200    82.3200         16
+
+processed 47377 tokens with 23852 phrases; found: 24153 phrases; correct: 19833.
+accuracy:  89.96%; precision:  82.11%; recall:  83.15%; FB1:  82.63
+             ADJP: precision:  51.54%; recall:  15.30%; FB1:  23.59  130
+             ADVP: precision:  65.04%; recall:  44.69%; FB1:  52.98  595
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  81.29%; recall:  85.44%; FB1:  83.31  13056
+               PP: precision:  88.51%; recall:  95.59%; FB1:  91.92  5196
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  74.05%; recall:  69.35%; FB1:  71.62  501
+               VP: precision:  81.20%; recall:  81.49%; FB1:  81.35  4675
+
+
+tst   16      1.8624e-02    18.3561     0.0690    82.1100    83.1500    82.6300    82.6300         16
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  17      3.2749e-02   243.1899
+trn   17      1.7182e-02    62.7908     0.0654     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 12263 phrases; correct: 9953.
+accuracy:  89.86%; precision:  81.16%; recall:  83.23%; FB1:  82.18
+             ADJP: precision:  58.41%; recall:  30.41%; FB1:  40.00  113
+             ADVP: precision:  49.72%; recall:  59.16%; FB1:  54.03  539
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  81.25%; recall:  85.39%; FB1:  83.27  6447
+               PP: precision:  89.65%; recall:  94.90%; FB1:  92.20  2513
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  65.31%; recall:  66.29%; FB1:  65.80  271
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  81.97%; recall:  79.96%; FB1:  80.95  2380
+
+
+dev   17      1.8602e-02    11.3020     0.0698    81.1600    83.2300    82.1800    82.3200         16
+
+processed 47377 tokens with 23852 phrases; found: 24593 phrases; correct: 20034.
+accuracy:  89.95%; precision:  81.46%; recall:  83.99%; FB1:  82.71
+             ADJP: precision:  46.84%; recall:  20.32%; FB1:  28.34  190
+             ADVP: precision:  52.89%; recall:  59.12%; FB1:  55.83  968
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  80.85%; recall:  85.57%; FB1:  83.14  13146
+               PP: precision:  89.19%; recall:  95.32%; FB1:  92.15  5142
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  75.61%; recall:  68.97%; FB1:  72.14  488
+               VP: precision:  82.61%; recall:  82.63%; FB1:  82.62  4659
+
+
+tst   17      1.7671e-02    14.1007     0.0670    81.4600    83.9900    82.7100    82.7100         17
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  18      3.2159e-02   241.5631
+trn   18      1.6781e-02    58.5287     0.0634     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 12045 phrases; correct: 10001.
+accuracy:  90.44%; precision:  83.03%; recall:  83.63%; FB1:  83.33
+             ADJP: precision:  63.74%; recall:  26.73%; FB1:  37.66  91
+             ADVP: precision:  57.52%; recall:  58.28%; FB1:  57.89  459
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  82.63%; recall:  86.22%; FB1:  84.39  6401
+               PP: precision:  90.56%; recall:  94.61%; FB1:  92.54  2480
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  68.92%; recall:  64.79%; FB1:  66.80  251
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  83.41%; recall:  80.78%; FB1:  82.07  2363
+
+
+dev   18      1.8148e-02     7.3026     0.0660    83.0300    83.6300    83.3300    83.3300         18
+
+processed 47377 tokens with 23852 phrases; found: 24039 phrases; correct: 20011.
+accuracy:  90.34%; precision:  83.24%; recall:  83.90%; FB1:  83.57
+             ADJP: precision:  46.86%; recall:  18.72%; FB1:  26.75  175
+             ADVP: precision:  60.60%; recall:  56.12%; FB1:  58.27  802
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  82.32%; recall:  85.86%; FB1:  84.05  12957
+               PP: precision:  90.51%; recall:  95.18%; FB1:  92.79  5059
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  79.05%; recall:  71.21%; FB1:  74.93  482
+               VP: precision:  83.63%; recall:  81.95%; FB1:  82.78  4564
+
+
+tst   18      1.7634e-02    17.0371     0.0667    83.2400    83.9000    83.5700    83.5700         18
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  19      3.1531e-02   239.7273
+trn   19      1.6077e-02    62.5466     0.0608     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 12051 phrases; correct: 10044.
+accuracy:  90.57%; precision:  83.35%; recall:  83.99%; FB1:  83.67
+             ADJP: precision:  66.99%; recall:  31.80%; FB1:  43.12  103
+             ADVP: precision:  57.14%; recall:  57.40%; FB1:  57.27  455
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  83.19%; recall:  86.63%; FB1:  84.87  6388
+               PP: precision:  91.67%; recall:  94.10%; FB1:  92.87  2437
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  72.08%; recall:  64.79%; FB1:  68.24  240
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  82.13%; recall:  81.72%; FB1:  81.92  2428
+
+
+dev   19      1.7607e-02     7.5206     0.0646    83.3500    83.9900    83.6700    83.6700         19
+
+processed 47377 tokens with 23852 phrases; found: 24107 phrases; correct: 20134.
+accuracy:  90.57%; precision:  83.52%; recall:  84.41%; FB1:  83.96
+             ADJP: precision:  53.41%; recall:  21.46%; FB1:  30.62  176
+             ADVP: precision:  61.63%; recall:  56.00%; FB1:  58.68  787
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  82.74%; recall:  86.19%; FB1:  84.43  12941
+               PP: precision:  91.52%; recall:  94.66%; FB1:  93.06  4976
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  81.37%; recall:  71.03%; FB1:  75.85  467
+               VP: precision:  82.23%; recall:  84.03%; FB1:  83.12  4760
+
+
+tst   19      1.6824e-02    19.6133     0.0646    83.5200    84.4100    83.9600    83.9600         19
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  20      3.0846e-02   234.1264
+trn   20      1.5712e-02    63.9656     0.0595     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 12108 phrases; correct: 10079.
+accuracy:  90.69%; precision:  83.24%; recall:  84.29%; FB1:  83.76
+             ADJP: precision:  68.35%; recall:  24.88%; FB1:  36.49  79
+             ADVP: precision:  58.76%; recall:  58.50%; FB1:  58.63  451
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  83.16%; recall:  86.57%; FB1:  84.83  6385
+               PP: precision:  90.13%; recall:  95.03%; FB1:  92.52  2503
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  69.17%; recall:  68.91%; FB1:  69.04  266
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  82.92%; recall:  82.38%; FB1:  82.65  2424
+
+
+dev   20      1.7176e-02     7.4677     0.0634    83.2400    84.2900    83.7600    83.7600         20
+
+processed 47377 tokens with 23852 phrases; found: 24202 phrases; correct: 20221.
+accuracy:  90.78%; precision:  83.55%; recall:  84.78%; FB1:  84.16
+             ADJP: precision:  51.82%; recall:  16.21%; FB1:  24.70  137
+             ADVP: precision:  65.82%; recall:  59.58%; FB1:  62.55  784
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  82.89%; recall:  86.25%; FB1:  84.54  12925
+               PP: precision:  89.97%; recall:  95.66%; FB1:  92.73  5115
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  76.77%; recall:  72.90%; FB1:  74.78  508
+               VP: precision:  82.99%; recall:  84.33%; FB1:  83.65  4733
+
+
+tst   20      1.6816e-02    17.6157     0.0637    83.5500    84.7800    84.1600    84.1600         20
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  21      2.9926e-02   239.3707
+trn   21      1.5279e-02    58.8007     0.0575     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 12113 phrases; correct: 10140.
+accuracy:  90.99%; precision:  83.71%; recall:  84.80%; FB1:  84.25
+             ADJP: precision:  67.42%; recall:  27.65%; FB1:  39.22  89
+             ADVP: precision:  58.53%; recall:  59.82%; FB1:  59.17  463
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  83.60%; recall:  87.02%; FB1:  85.28  6385
+               PP: precision:  91.02%; recall:  95.16%; FB1:  93.04  2482
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  68.52%; recall:  69.29%; FB1:  68.90  270
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  83.62%; recall:  83.07%; FB1:  83.35  2424
+
+
+dev   21      1.6735e-02     8.2841     0.0616    83.7100    84.8000    84.2500    84.2500         21
+
+processed 47377 tokens with 23852 phrases; found: 24251 phrases; correct: 20357.
+accuracy:  91.05%; precision:  83.94%; recall:  85.35%; FB1:  84.64
+             ADJP: precision:  48.37%; recall:  16.89%; FB1:  25.04  153
+             ADVP: precision:  61.25%; recall:  60.97%; FB1:  61.11  862
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  83.50%; recall:  86.81%; FB1:  85.12  12915
+               PP: precision:  90.72%; recall:  95.95%; FB1:  93.26  5088
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  79.92%; recall:  73.64%; FB1:  76.65  493
+               VP: precision:  83.57%; recall:  85.04%; FB1:  84.29  4740
+
+
+tst   21      1.6322e-02    15.2338     0.0612    83.9400    85.3500    84.6400    84.6400         21
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  22      2.9669e-02   235.5344
+trn   22      1.4494e-02    61.4678     0.0552     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 12095 phrases; correct: 10182.
+accuracy:  91.12%; precision:  84.18%; recall:  85.15%; FB1:  84.66
+             ADJP: precision:  65.83%; recall:  36.41%; FB1:  46.88  120
+             ADVP: precision:  57.63%; recall:  63.36%; FB1:  60.36  498
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  84.18%; recall:  87.17%; FB1:  85.65  6352
+               PP: precision:  91.38%; recall:  95.16%; FB1:  93.23  2472
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  71.26%; recall:  67.79%; FB1:  69.48  254
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  84.58%; recall:  83.16%; FB1:  83.86  2399
+
+
+dev   22      1.6430e-02    11.2196     0.0594    84.1800    85.1500    84.6600    84.6600         22
+
+processed 47377 tokens with 23852 phrases; found: 24208 phrases; correct: 20411.
+accuracy:  91.20%; precision:  84.32%; recall:  85.57%; FB1:  84.94
+             ADJP: precision:  56.28%; recall:  25.57%; FB1:  35.16  199
+             ADVP: precision:  61.63%; recall:  64.55%; FB1:  63.06  907
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  83.68%; recall:  86.59%; FB1:  85.11  12854
+               PP: precision:  90.93%; recall:  95.66%; FB1:  93.23  5061
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  82.47%; recall:  74.77%; FB1:  78.43  485
+               VP: precision:  84.69%; recall:  85.49%; FB1:  85.09  4702
+
+
+tst   22      1.5694e-02    13.8254     0.0594    84.3200    85.5700    84.9400    84.9400         22
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  23      2.8789e-02   231.6108
+trn   23      1.4399e-02    62.9018     0.0546     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 12249 phrases; correct: 10252.
+accuracy:  91.20%; precision:  83.70%; recall:  85.73%; FB1:  84.70
+             ADJP: precision:  47.26%; recall:  43.78%; FB1:  45.45  201
+             ADVP: precision:  58.80%; recall:  62.69%; FB1:  60.68  483
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  1
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  84.05%; recall:  87.30%; FB1:  85.65  6371
+               PP: precision:  91.85%; recall:  95.37%; FB1:  93.57  2465
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  73.90%; recall:  68.91%; FB1:  71.32  249
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  83.50%; recall:  84.84%; FB1:  84.16  2479
+
+
+dev   23      1.6568e-02    11.3923     0.0599    83.7000    85.7300    84.7000    84.7000         23
+
+processed 47377 tokens with 23852 phrases; found: 24520 phrases; correct: 20487.
+accuracy:  91.14%; precision:  83.55%; recall:  85.89%; FB1:  84.71
+             ADJP: precision:  46.67%; recall:  38.36%; FB1:  42.11  360
+             ADVP: precision:  62.81%; recall:  64.55%; FB1:  63.67  890
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  1
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  82.93%; recall:  86.48%; FB1:  84.67  12953
+               PP: precision:  91.56%; recall:  95.41%; FB1:  93.44  5013
+              PRT: precision:  50.00%; recall:   0.94%; FB1:   1.85  2
+             SBAR: precision:  83.33%; recall:  74.77%; FB1:  78.82  480
+               VP: precision:  83.53%; recall:  86.45%; FB1:  84.97  4821
+
+
+tst   23      1.5695e-02    14.3177     0.0585    83.5500    85.8900    84.7100    84.9400         22
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  24      2.8484e-02   229.9464
+trn   24      1.3942e-02    54.1617     0.0543     0.0000     0.0000     0.0000     0.0000          1
+
+processed 23615 tokens with 11958 phrases; found: 11999 phrases; correct: 10216.
+accuracy:  91.60%; precision:  85.14%; recall:  85.43%; FB1:  85.29
+             ADJP: precision:  58.79%; recall:  44.70%; FB1:  50.79  165
+             ADVP: precision:  63.24%; recall:  61.15%; FB1:  62.18  438
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  85.29%; recall:  87.27%; FB1:  86.27  6276
+               PP: precision:  91.14%; recall:  95.75%; FB1:  93.39  2494
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  72.37%; recall:  69.66%; FB1:  70.99  257
+              UCP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               VP: precision:  85.69%; recall:  83.20%; FB1:  84.43  2369
+
+
+dev   24      1.5699e-02     9.2949     0.0570    85.1400    85.4300    85.2900    85.2900         24
+
+processed 47377 tokens with 23852 phrases; found: 23921 phrases; correct: 20407.
+accuracy:  91.46%; precision:  85.31%; recall:  85.56%; FB1:  85.43
+             ADJP: precision:  52.98%; recall:  36.53%; FB1:  43.24  302
+             ADVP: precision:  66.75%; recall:  62.36%; FB1:  64.48  809
+            CONJP: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             INTJ: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+              LST: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+               NP: precision:  85.07%; recall:  86.57%; FB1:  85.81  12642
+               PP: precision:  90.68%; recall:  96.01%; FB1:  93.27  5094
+              PRT: precision:   0.00%; recall:   0.00%; FB1:   0.00  0
+             SBAR: precision:  82.74%; recall:  73.46%; FB1:  77.82  475
+               VP: precision:  85.69%; recall:  84.61%; FB1:  85.15  4599
+
+
+tst   24      1.5336e-02    17.6888     0.0573    85.3100    85.5600    85.4300    85.4300         24
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
