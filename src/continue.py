@@ -8,7 +8,7 @@ from lazrnn import RDNN, RDNN_Dummy
 
 
 def main(args):
-    args = get_args()
+    # args = get_args()
     setup_logger(args)
 
     try:
@@ -26,6 +26,7 @@ def main(args):
 
         RNN = RDNN_Dummy if args['rnn'] == 'dummy' else RDNN
         rdnn = RNN(feat.NC, feat.NF, args)
+        rdnn.set_param_values(rnn_param_values)
 
         validator.validate(rdnn, args)
     except Exception as e:
