@@ -1,13 +1,15 @@
 import numpy as np
 
+import argparse
+import lasagne
 import featchar
 import logging
 from dataset import Dset
-from exper import setup_args, Batcher, Reporter, Validator
+from exper import setup_logger, Batcher, Reporter, Validator
 from lazrnn import RDNN, RDNN_Dummy
 
 
-def main(args):
+def main(args, rnn_param_values):
     # args = get_args()
     setup_logger(args)
 
@@ -30,11 +32,19 @@ def main(args):
 
         validator.validate(rdnn, args)
     except Exception as e:
+        print e
         logging.exception('an error occured.')
 
 if __name__ == '__main__':
-    import sys
     from utils import MODEL_DIR
-    model_file_name = sys.argv[1]
-    dat = np.load('{}/{}'.format(MODEL_DIR,mode_file_name))
-    print dat['argsd'].tolist()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('model_file', help='model file to load from')
+    parser.add_argument('log_file', help='log file and new model file name')
+    cargs = vars(parser.parse_args())
+
+    dat = np.load('{}/{}'.format(MODEL_DIR, cargs['model_file']))
+    args = dat['argsd'].tolist()
+    args['log'] = cargs['log_file']
+    main(args, dat['rnn_param_values'])
+
+
