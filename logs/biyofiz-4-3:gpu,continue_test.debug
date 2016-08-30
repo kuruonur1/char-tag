@@ -1,0 +1,236 @@
+activation:	bi-lstm
+batch_norm:	0
+breaktrn:	0
+captrn:	500
+cdrop:	0.0
+charset:	[]
+decoder:	1
+drates:	[0.2, 0.5, 0.5, 0.5, 0.8]
+emb:	0
+eps:	1e-08
+fbias:	0.0
+fbmerge:	concat
+feat:	basic
+fepoch:	600
+gclip:	0
+gnoise:	False
+in2out:	0
+lang:	cze
+level:	char
+load:	
+log:	continue_test
+lr:	0.001
+n_batch:	32
+n_hidden:	[128, 128, 128, 128]
+norm:	1
+opt:	adam
+recout:	0
+rep:	std
+rnn:	lazrnn
+sample:	0
+save:	True
+seed:	0
+shuf:	1
+sorted:	1
+tagging:	bio
+truncate:	-1
+base_log_name:	biyofiz-4-3:gpu,continue_test
+# of sents trn, dev, tst: 4644 572 577
+input: trn	maxlen: 625 minlen: 3 avglen: 142.17 stdlen: 90.55
+input: dev	maxlen: 593 minlen: 3 avglen: 142.58 stdlen: 91.08
+input: tst	maxlen: 627 minlen: 3 avglen: 144.16 stdlen: 92.89
+[u'c= ', u'c=!', u'c="', u'c=$', u'c=%', u'c=&', u"c='", u'c=(', u'c=)', u'c=*', u'c=+', u'c=,', u'c=-', u'c=.', u'c=/', u'c=0', u'c=1', u'c=2', u'c=3', u'c=4', u'c=5', u'c=6', u'c=7', u'c=8', u'c=9', u'c=:', u'c=;', u'c=<', u'c==', u'c=>', u'c=?', u'c=@', u'c=A', u'c=B', u'c=C', u'c=D', u'c=E', u'c=F', u'c=G', u'c=H', u'c=I', u'c=J', u'c=K', u'c=L', u'c=M', u'c=N', u'c=O', u'c=P', u'c=Q', u'c=R', u'c=S', u'c=T', u'c=U', u'c=V', u'c=W', u'c=X', u'c=Y', u'c=Z', u'c=[', u'c=\\', u'c=]', u'c=_', u'c=`', u'c=a', u'c=b', u'c=c', u'c=d', u'c=e', u'c=f', u'c=g', u'c=h', u'c=i', u'c=j', u'c=k', u'c=l', u'c=m', u'c=n', u'c=o', u'c=p', u'c=q', u'c=r', u'c=s', u'c=t', u'c=u', u'c=v', u'c=w', u'c=x', u'c=y', u'c=z', u'c=\xa7', u'c=\xae', u'c=\xb0', u'c=\xb5', u'c=\xc1', u'c=\xc9', u'c=\xcd', u'c=\xda', u'c=\xdc', u'c=\xdd', u'c=\xe1', u'c=\xe2', u'c=\xe4', u'c=\xe9', u'c=\xed', u'c=\xee', u'c=\xf1', u'c=\xf3', u'c=\xf6', u'c=\xfa', u'c=\xfc', u'c=\xfd', u'c=\u0107', u'c=\u010c', u'c=\u010d', u'c=\u010e', u'c=\u010f', u'c=\u0110', u'c=\u011a', u'c=\u011b', u'c=\u0139', u'c=\u013a', u'c=\u013d', u'c=\u0144', u'c=\u0147', u'c=\u0148', u'c=\u0158', u'c=\u0159', u'c=\u015b', u'c=\u0160', u'c=\u0161', u'c=\u0164', u'c=\u0165', u'c=\u016e', u'c=\u016f', u'c=\u017d', u'c=\u017e']
+c=  c=! c=" c=$ c=% c=& c=' c=( c=) c=* c=+ c=, c=- c=. c=/ c=0 c=1 c=2 c=3 c=4 c=5 c=6 c=7 c=8 c=9 c=: c=; c=< c== c=> c=? c=@ c=A c=B c=C c=D c=E c=F c=G c=H c=I c=J c=K c=L c=M c=N c=O c=P c=Q c=R c=S c=T c=U c=V c=W c=X c=Y c=Z c=[ c=\ c=] c=_ c=` c=a c=b c=c c=d c=e c=f c=g c=h c=i c=j c=k c=l c=m c=n c=o c=p c=q c=r c=s c=t c=u c=v c=w c=x c=y c=z c=§ c=® c=° c=µ c=Á c=É c=Í c=Ú c=Ü c=Ý c=á c=â c=ä c=é c=í c=î c=ñ c=ó c=ö c=ú c=ü c=ý c=ć c=Č c=č c=Ď c=ď c=Đ c=Ě c=ě c=Ĺ c=ĺ c=Ľ c=ń c=Ň c=ň c=Ř c=ř c=ś c=Š c=š c=Ť c=ť c=Ů c=ů c=Ž c=ž
+['i-a' 'i-g' 'i-i' 'i-m' 'i-o' 'i-p' 'i-t' 'o']
+NF: 136 NC: 8
+[[  1.         -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339]
+ [-36.04365339   1.         -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339   1.         -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339 -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339   1.
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.         -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339   1.        ]]
+[[  1.         -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339   1.        ]
+ [-36.04365339   1.         -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339   1.        ]
+ [-36.04365339 -36.04365339   1.         -36.04365339 -36.04365339
+  -36.04365339 -36.04365339   1.        ]
+ [-36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339 -36.04365339   1.        ]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339   1.        ]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339   1.
+  -36.04365339   1.        ]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.           1.        ]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339   1.        ]]
+[[  1.         -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339]
+ [-36.04365339   1.         -36.04365339 -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339   1.         -36.04365339 -36.04365339
+  -36.04365339 -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339 -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339   1.         -36.04365339
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339   1.
+  -36.04365339 -36.04365339]
+ [-36.04365339 -36.04365339 -36.04365339 -36.04365339 -36.04365339
+  -36.04365339   1.         -36.04365339]
+ [  1.           1.           1.           1.           1.           1.
+    1.           1.        ]]
+l_in: (None, None, 136)
+l_mask: (None, None)
+l_drop: (None, None, 136)
+l_forward: (None, None, 128)
+l_backward: (None, None, 128)
+l_fbmerge: (None, None, 256)
+l_forward: (None, None, 128)
+l_backward: (None, None, 128)
+l_fbmerge: (None, None, 256)
+l_forward: (None, None, 128)
+l_backward: (None, None, 128)
+l_fbmerge: (None, None, 256)
+l_forward: (None, None, 128)
+l_backward: (None, None, 128)
+l_fbmerge: (None, None, 256)
+l_reshape: (None, 256)
+l_rec_out: (None, 8)
+l_out: (None, None, 8)
+[W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W_in_to_ingate, W_hid_to_ingate, b_ingate, W_in_to_forgetgate, W_hid_to_forgetgate, b_forgetgate, W_in_to_cell, W_hid_to_cell, b_cell, W_in_to_outgate, W_hid_to_outgate, b_outgate, W_cell_to_ingate, W_cell_to_forgetgate, W_cell_to_outgate, W, b]
+Compiling functions...
+Compiling done.
+training the model...
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  1       6.9530e-03   103.2015
+trn   1       6.3260e-04    26.9014     0.0027     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 1918 phrases; correct: 1404.
+accuracy:  93.34%; precision:  73.20%; recall:  75.04%; FB1:  74.11
+                A: precision:  66.67%; recall:  52.17%; FB1:  58.54  18
+                G: precision:  80.21%; recall:  78.20%; FB1:  79.19  389
+                I: precision:  55.12%; recall:  65.22%; FB1:  59.74  381
+                M: precision:  43.75%; recall:  41.18%; FB1:  42.42  32
+                O: precision:  68.66%; recall:  60.75%; FB1:  64.46  284
+                P: precision:  80.35%; recall:  83.10%; FB1:  81.70  514
+                T: precision:  82.67%; recall:  90.18%; FB1:  86.26  300
+
+
+dev   1       5.0260e-02     3.6729     0.0654    73.2000    75.0400    74.1100    74.1100          1
+
+processed 15061 tokens with 1906 phrases; found: 1983 phrases; correct: 1386.
+accuracy:  92.29%; precision:  69.89%; recall:  72.72%; FB1:  71.28
+                A: precision:  66.67%; recall:  57.14%; FB1:  61.54  12
+                G: precision:  70.50%; recall:  70.29%; FB1:  70.40  339
+                I: precision:  49.34%; recall:  60.19%; FB1:  54.23  377
+                M: precision:  46.43%; recall:  40.62%; FB1:  43.33  28
+                O: precision:  66.29%; recall:  62.43%; FB1:  64.31  356
+                P: precision:  72.64%; recall:  78.18%; FB1:  75.31  508
+                T: precision:  92.29%; recall:  92.80%; FB1:  92.54  363
+
+
+tst   1       8.3158e-02     4.3238     0.0726    69.8900    72.7200    71.2800    71.2800          1
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  2       6.9588e-03   102.7249
+trn   2       5.9352e-04    26.0460     0.0025     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 1969 phrases; correct: 1429.
+accuracy:  93.46%; precision:  72.57%; recall:  76.38%; FB1:  74.43
+                A: precision:  60.00%; recall:  52.17%; FB1:  55.81  20
+                G: precision:  77.67%; recall:  78.45%; FB1:  78.05  403
+                I: precision:  59.09%; recall:  64.60%; FB1:  61.72  352
+                M: precision:  80.00%; recall:  47.06%; FB1:  59.26  20
+                O: precision:  65.77%; recall:  61.06%; FB1:  63.33  298
+                P: precision:  76.32%; recall:  87.53%; FB1:  81.54  570
+                T: precision:  81.37%; recall:  90.55%; FB1:  85.71  306
+
+
+dev   2       5.2569e-02     3.6705     0.0630    72.5700    76.3800    74.4300    74.4300          2
+
+processed 15061 tokens with 1906 phrases; found: 2009 phrases; correct: 1398.
+accuracy:  92.30%; precision:  69.59%; recall:  73.35%; FB1:  71.42
+                A: precision:  61.54%; recall:  57.14%; FB1:  59.26  13
+                G: precision:  69.10%; recall:  69.71%; FB1:  69.40  343
+                I: precision:  50.74%; recall:  55.34%; FB1:  52.94  337
+                M: precision:  52.38%; recall:  34.38%; FB1:  41.51  21
+                O: precision:  66.48%; recall:  64.02%; FB1:  65.23  364
+                P: precision:  70.43%; recall:  83.26%; FB1:  76.31  558
+                T: precision:  90.08%; recall:  93.07%; FB1:  91.55  373
+
+
+tst   2       8.0858e-02     4.2901     0.0716    69.5900    73.3500    71.4200    71.4200          2
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  3       6.9055e-03   103.3473
+trn   3       5.5616e-04    26.2902     0.0024     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 1938 phrases; correct: 1425.
+accuracy:  93.59%; precision:  73.53%; recall:  76.16%; FB1:  74.82
+                A: precision:  52.38%; recall:  47.83%; FB1:  50.00  21
+                G: precision:  80.16%; recall:  74.94%; FB1:  77.46  373
+                I: precision:  59.94%; recall:  63.66%; FB1:  61.75  342
+                M: precision:  66.67%; recall:  35.29%; FB1:  46.15  18
+                O: precision:  67.52%; recall:  65.42%; FB1:  66.46  311
+                P: precision:  76.13%; recall:  87.93%; FB1:  81.61  574
+                T: precision:  83.95%; recall:  91.27%; FB1:  87.46  299
+
+
+dev   3       5.1232e-02     3.6071     0.0624    73.5300    76.1600    74.8200    74.8200          3
+
+processed 15061 tokens with 1906 phrases; found: 1983 phrases; correct: 1395.
+accuracy:  92.22%; precision:  70.35%; recall:  73.19%; FB1:  71.74
+                A: precision:  66.67%; recall:  57.14%; FB1:  61.54  12
+                G: precision:  68.91%; recall:  69.12%; FB1:  69.02  341
+                I: precision:  54.46%; recall:  53.40%; FB1:  53.92  303
+                M: precision:  47.83%; recall:  34.38%; FB1:  40.00  23
+                O: precision:  66.07%; recall:  67.99%; FB1:  67.01  389
+                P: precision:  70.57%; recall:  81.78%; FB1:  75.76  547
+                T: precision:  90.49%; recall:  92.24%; FB1:  91.36  368
+
+
+tst   3       8.7720e-02     4.2834     0.0726    70.3500    73.1900    71.7400    71.7400          3
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 
+trn0  4       6.7917e-03   103.7877
+trn   4       5.7361e-04    26.9205     0.0023     0.0000     0.0000     0.0000     0.0000          1
+
+processed 14796 tokens with 1871 phrases; found: 1921 phrases; correct: 1414.
+accuracy:  93.48%; precision:  73.61%; recall:  75.57%; FB1:  74.58
+                A: precision:  61.11%; recall:  47.83%; FB1:  53.66  18
+                G: precision:  75.85%; recall:  78.70%; FB1:  77.24  414
+                I: precision:  60.91%; recall:  62.42%; FB1:  61.66  330
+                M: precision:  50.00%; recall:  44.12%; FB1:  46.88  30
+                O: precision:  66.99%; recall:  64.49%; FB1:  65.71  309
+                P: precision:  80.00%; recall:  83.70%; FB1:  81.81  520
+                T: precision:  83.33%; recall:  90.91%; FB1:  86.96  300
+
+
+dev   4       5.1749e-02     3.6695     0.0641    73.6100    75.5700    74.5800    74.8200          3
+
+processed 15061 tokens with 1906 phrases; found: 1982 phrases; correct: 1380.
+accuracy:  92.13%; precision:  69.63%; recall:  72.40%; FB1:  70.99
+                A: precision:  66.67%; recall:  57.14%; FB1:  61.54  12
+                G: precision:  68.63%; recall:  72.06%; FB1:  70.30  357
+                I: precision:  52.68%; recall:  54.05%; FB1:  53.35  317
+                M: precision:  40.00%; recall:  31.25%; FB1:  35.09  25
+                O: precision:  62.32%; recall:  66.93%; FB1:  64.54  406
+                P: precision:  73.02%; recall:  77.97%; FB1:  75.41  504
+                T: precision:  91.14%; recall:  91.14%; FB1:  91.14  361
+
+
+tst   4       8.9558e-02     4.2882     0.0729    69.6300    72.4000    70.9900    71.7400          3
+
+dset  epoch        mcost      mtime       yerr        pre     recall         f1       best       best 

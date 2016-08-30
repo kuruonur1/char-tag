@@ -9,7 +9,7 @@ STR = """#!/bin/bash
 #$ -pe smp {}
 #$ -cwd
 #$ -o /dev/null
-#$ -e /mnt/kufs/scratch/{}/char-ner/job.err
+#$ -e /mnt/kufs/scratch/{}/char-tag/job.err
 #$ -M {}@ku.edu.tr
 #$ -m bea
  

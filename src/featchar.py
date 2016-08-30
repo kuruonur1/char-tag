@@ -91,6 +91,6 @@ if __name__ == '__main__':
     dset = Dset(level='word')
     feat = Feat()
     feat.fit(dset)
-    x,y = feat.transform(dset.trn[0])
+    x,y = feat.transform(dset.dev[0])
     print x
     print y
